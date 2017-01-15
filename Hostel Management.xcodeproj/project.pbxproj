@@ -1,0 +1,1014 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1374D13B171410005715518E /* Pods_Hostel_ManagementTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89058DE7C4B533F8A833BE6 /* Pods_Hostel_ManagementTests.framework */; };
+		A0CE2C2E69D43BD0A69882A6 /* Pods_Hostel_ManagementUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 683CF313C16DEADBC4124AEC /* Pods_Hostel_ManagementUITests.framework */; };
+		AD03FB8D1E2B87E50052B635 /* GaiaSDKUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD03FB8C1E2B87E50052B635 /* GaiaSDKUIKit.framework */; };
+		AD03FB8E1E2B87E50052B635 /* GaiaSDKUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AD03FB8C1E2B87E50052B635 /* GaiaSDKUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AD1261421E2B840400A4D285 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AD1261431E2B844F00A4D285 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		AD18FAE21E290FA9007175E8 /* HoaDonDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FACC1E290FA9007175E8 /* HoaDonDB+CoreDataClass.swift */; };
+		AD18FAE31E290FA9007175E8 /* HoaDonDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FACD1E290FA9007175E8 /* HoaDonDB+CoreDataProperties.swift */; };
+		AD18FAE41E290FA9007175E8 /* DichVuSinhHoatDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FACE1E290FA9007175E8 /* DichVuSinhHoatDB+CoreDataClass.swift */; };
+		AD18FAE51E290FA9007175E8 /* DichVuSinhHoatDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FACF1E290FA9007175E8 /* DichVuSinhHoatDB+CoreDataProperties.swift */; };
+		AD18FAE61E290FA9007175E8 /* HoSoNhanKhauDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FAD01E290FA9007175E8 /* HoSoNhanKhauDB+CoreDataClass.swift */; };
+		AD18FAE71E290FA9007175E8 /* HoSoNhanKhauDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FAD11E290FA9007175E8 /* HoSoNhanKhauDB+CoreDataProperties.swift */; };
+		AD18FAE81E290FA9007175E8 /* NhaTroDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FAD21E290FA9007175E8 /* NhaTroDB+CoreDataClass.swift */; };
+		AD18FAE91E290FA9007175E8 /* NhaTroDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FAD31E290FA9007175E8 /* NhaTroDB+CoreDataProperties.swift */; };
+		AD18FAEA1E290FA9007175E8 /* TinhTrangDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FAD41E290FA9007175E8 /* TinhTrangDB+CoreDataClass.swift */; };
+		AD18FAEB1E290FA9007175E8 /* TinhTrangDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FAD51E290FA9007175E8 /* TinhTrangDB+CoreDataProperties.swift */; };
+		AD18FAEC1E290FA9007175E8 /* HinhAnhPhongDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FAD61E290FA9007175E8 /* HinhAnhPhongDB+CoreDataClass.swift */; };
+		AD18FAED1E290FA9007175E8 /* HinhAnhPhongDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FAD71E290FA9007175E8 /* HinhAnhPhongDB+CoreDataProperties.swift */; };
+		AD18FAEE1E290FA9007175E8 /* ChuNhaDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FAD81E290FA9007175E8 /* ChuNhaDB+CoreDataClass.swift */; };
+		AD18FAEF1E290FA9007175E8 /* ChuNhaDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FAD91E290FA9007175E8 /* ChuNhaDB+CoreDataProperties.swift */; };
+		AD18FAF01E290FAA007175E8 /* LoaiDichVuDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FADA1E290FA9007175E8 /* LoaiDichVuDB+CoreDataClass.swift */; };
+		AD18FAF11E290FAA007175E8 /* LoaiDichVuDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FADB1E290FA9007175E8 /* LoaiDichVuDB+CoreDataProperties.swift */; };
+		AD18FAF21E290FAA007175E8 /* NguoiThueTroDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FADC1E290FA9007175E8 /* NguoiThueTroDB+CoreDataClass.swift */; };
+		AD18FAF31E290FAA007175E8 /* NguoiThueTroDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FADD1E290FA9007175E8 /* NguoiThueTroDB+CoreDataProperties.swift */; };
+		AD18FAF41E290FAA007175E8 /* PhongDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FADE1E290FA9007175E8 /* PhongDB+CoreDataClass.swift */; };
+		AD18FAF51E290FAA007175E8 /* PhongDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FADF1E290FA9007175E8 /* PhongDB+CoreDataProperties.swift */; };
+		AD18FAF61E290FAA007175E8 /* GioiTinhDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FAE01E290FA9007175E8 /* GioiTinhDB+CoreDataClass.swift */; };
+		AD18FAF71E290FAA007175E8 /* GioiTinhDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FAE11E290FA9007175E8 /* GioiTinhDB+CoreDataProperties.swift */; };
+		AD18FAF91E2AFB06007175E8 /* PhongTro.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FAF81E2AFB06007175E8 /* PhongTro.swift */; };
+		AD18FAFB1E2B0E1C007175E8 /* RoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FAFA1E2B0E1C007175E8 /* RoomTableViewCell.swift */; };
+		AD18FAFD1E2B0E6A007175E8 /* RoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FAFC1E2B0E6A007175E8 /* RoomTableViewController.swift */; };
+		AD18FAFF1E2B2243007175E8 /* NguoiThueTro.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FAFE1E2B2243007175E8 /* NguoiThueTro.swift */; };
+		AD18FB011E2B2550007175E8 /* HoSoNhanKhau.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FB001E2B2550007175E8 /* HoSoNhanKhau.swift */; };
+		AD18FB031E2B2965007175E8 /* DichVuSinhHoat.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FB021E2B2965007175E8 /* DichVuSinhHoat.swift */; };
+		AD18FB051E2B2CAF007175E8 /* HoaDon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FB041E2B2CAF007175E8 /* HoaDon.swift */; };
+		AD197C171E181379002D334A /* FirstSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD197C161E181379002D334A /* FirstSceneViewController.swift */; };
+		AD197C1B1E18C861002D334A /* SupportingMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD197C1A1E18C861002D334A /* SupportingMethods.swift */; };
+		AD197C1D1E18EF51002D334A /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD197C1C1E18EF51002D334A /* AccountViewController.swift */; };
+		AD197C1F1E194E48002D334A /* EditAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD197C1E1E194E48002D334A /* EditAccountViewController.swift */; };
+		AD197C211E1958BD002D334A /* EditPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD197C201E1958BD002D334A /* EditPasswordViewController.swift */; };
+		AD197C231E19F1BF002D334A /* HostelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD197C221E19F1BF002D334A /* HostelTableViewCell.swift */; };
+		AD197CEE1E1F45A4002D334A /* ChuNha.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD197CED1E1F45A4002D334A /* ChuNha.swift */; };
+		AD197D801E20CE02002D334A /* EditHostelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD197D7F1E20CE02002D334A /* EditHostelViewController.swift */; };
+		AD197D821E271272002D334A /* NhaTro.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD197D811E271272002D334A /* NhaTro.swift */; };
+		AD1B605A1E2B696B00DB6AD9 /* EditRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1B60591E2B696B00DB6AD9 /* EditRoomViewController.swift */; };
+		AD4970ED1E17E84500D27447 /* RentRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4970EC1E17E84500D27447 /* RentRoomViewController.swift */; };
+		AD4970EF1E17EFDD00D27447 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4970EE1E17EFDD00D27447 /* MainViewController.swift */; };
+		AD4970F21E17F18B00D27447 /* Definition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4970F11E17F18B00D27447 /* Definition.swift */; };
+		AD4AED5C1E271EBA00DD02E8 /* HostelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4AED5B1E271EBA00DD02E8 /* HostelTableViewController.swift */; };
+		AD879EE51E154E5500D5E154 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD879EE41E154E5500D5E154 /* CreateAccountViewController.swift */; };
+		AD91E69D1E10229400629F35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD91E69C1E10229400629F35 /* AppDelegate.swift */; };
+		AD91E69F1E10229400629F35 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD91E69E1E10229400629F35 /* LoginViewController.swift */; };
+		AD91E6A51E10229400629F35 /* Hostel_Management.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AD91E6A31E10229400629F35 /* Hostel_Management.xcdatamodeld */; };
+		AD91E6A71E10229400629F35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD91E6A61E10229400629F35 /* Assets.xcassets */; };
+		AD91E6AA1E10229400629F35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD91E6A81E10229400629F35 /* LaunchScreen.storyboard */; };
+		AD91E6B51E10229400629F35 /* Hostel_ManagementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD91E6B41E10229400629F35 /* Hostel_ManagementTests.swift */; };
+		AD91E6C01E10229400629F35 /* Hostel_ManagementUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD91E6BF1E10229400629F35 /* Hostel_ManagementUITests.swift */; };
+		ADAC7C2A1E15476C00641F9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADAC7C281E15476C00641F9A /* Main.storyboard */; };
+		ADC55B6F1E2B8FE400DEF952 /* GaiaSDKUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD03FB8C1E2B87E50052B635 /* GaiaSDKUIKit.framework */; };
+		ADC55B701E2B8FE400DEF952 /* GaiaSDKUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AD03FB8C1E2B87E50052B635 /* GaiaSDKUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B5628E3C77A3445F64442040 /* Pods_Hostel_Management.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2349055DC21858BAF47657E /* Pods_Hostel_Management.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AD91E6B11E10229400629F35 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD91E6911E10229400629F35 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD91E6981E10229400629F35;
+			remoteInfo = "Hostel Management";
+		};
+		AD91E6BC1E10229400629F35 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD91E6911E10229400629F35 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD91E6981E10229400629F35;
+			remoteInfo = "Hostel Management";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		ADD9CB6B1E1417090051F63B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AD03FB8E1E2B87E50052B635 /* GaiaSDKUIKit.framework in Embed Frameworks */,
+				ADC55B701E2B8FE400DEF952 /* GaiaSDKUIKit.framework in Embed Frameworks */,
+				AD1261421E2B840400A4D285 /* (null) in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2F827F0A9B9D05D4F2A6EC2F /* Pods-Hostel ManagementUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hostel ManagementUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hostel ManagementUITests/Pods-Hostel ManagementUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4C7CD629D3EA8563D13CABE3 /* Pods-Hostel ManagementTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hostel ManagementTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hostel ManagementTests/Pods-Hostel ManagementTests.release.xcconfig"; sourceTree = "<group>"; };
+		5D47286107D3A74633B28E89 /* Pods-Hostel ManagementUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hostel ManagementUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hostel ManagementUITests/Pods-Hostel ManagementUITests.release.xcconfig"; sourceTree = "<group>"; };
+		683CF313C16DEADBC4124AEC /* Pods_Hostel_ManagementUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hostel_ManagementUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A15F3FEBB4DAEA471E4EF724 /* Pods-Hostel ManagementTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hostel ManagementTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hostel ManagementTests/Pods-Hostel ManagementTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A2349055DC21858BAF47657E /* Pods_Hostel_Management.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hostel_Management.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD03FB8C1E2B87E50052B635 /* GaiaSDKUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GaiaSDKUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD18FACC1E290FA9007175E8 /* HoaDonDB+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HoaDonDB+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AD18FACD1E290FA9007175E8 /* HoaDonDB+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HoaDonDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AD18FACE1E290FA9007175E8 /* DichVuSinhHoatDB+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DichVuSinhHoatDB+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AD18FACF1E290FA9007175E8 /* DichVuSinhHoatDB+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DichVuSinhHoatDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AD18FAD01E290FA9007175E8 /* HoSoNhanKhauDB+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HoSoNhanKhauDB+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AD18FAD11E290FA9007175E8 /* HoSoNhanKhauDB+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HoSoNhanKhauDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AD18FAD21E290FA9007175E8 /* NhaTroDB+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NhaTroDB+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AD18FAD31E290FA9007175E8 /* NhaTroDB+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NhaTroDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AD18FAD41E290FA9007175E8 /* TinhTrangDB+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TinhTrangDB+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AD18FAD51E290FA9007175E8 /* TinhTrangDB+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TinhTrangDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AD18FAD61E290FA9007175E8 /* HinhAnhPhongDB+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HinhAnhPhongDB+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AD18FAD71E290FA9007175E8 /* HinhAnhPhongDB+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HinhAnhPhongDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AD18FAD81E290FA9007175E8 /* ChuNhaDB+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChuNhaDB+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AD18FAD91E290FA9007175E8 /* ChuNhaDB+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChuNhaDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AD18FADA1E290FA9007175E8 /* LoaiDichVuDB+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoaiDichVuDB+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AD18FADB1E290FA9007175E8 /* LoaiDichVuDB+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoaiDichVuDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AD18FADC1E290FA9007175E8 /* NguoiThueTroDB+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NguoiThueTroDB+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AD18FADD1E290FA9007175E8 /* NguoiThueTroDB+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NguoiThueTroDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AD18FADE1E290FA9007175E8 /* PhongDB+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PhongDB+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AD18FADF1E290FA9007175E8 /* PhongDB+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PhongDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AD18FAE01E290FA9007175E8 /* GioiTinhDB+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GioiTinhDB+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AD18FAE11E290FA9007175E8 /* GioiTinhDB+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GioiTinhDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AD18FAF81E2AFB06007175E8 /* PhongTro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhongTro.swift; sourceTree = "<group>"; };
+		AD18FAFA1E2B0E1C007175E8 /* RoomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomTableViewCell.swift; sourceTree = "<group>"; };
+		AD18FAFC1E2B0E6A007175E8 /* RoomTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomTableViewController.swift; sourceTree = "<group>"; };
+		AD18FAFE1E2B2243007175E8 /* NguoiThueTro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NguoiThueTro.swift; sourceTree = "<group>"; };
+		AD18FB001E2B2550007175E8 /* HoSoNhanKhau.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoSoNhanKhau.swift; sourceTree = "<group>"; };
+		AD18FB021E2B2965007175E8 /* DichVuSinhHoat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DichVuSinhHoat.swift; sourceTree = "<group>"; };
+		AD18FB041E2B2CAF007175E8 /* HoaDon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoaDon.swift; sourceTree = "<group>"; };
+		AD197C161E181379002D334A /* FirstSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstSceneViewController.swift; sourceTree = "<group>"; };
+		AD197C1A1E18C861002D334A /* SupportingMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportingMethods.swift; sourceTree = "<group>"; };
+		AD197C1C1E18EF51002D334A /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		AD197C1E1E194E48002D334A /* EditAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditAccountViewController.swift; sourceTree = "<group>"; };
+		AD197C201E1958BD002D334A /* EditPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPasswordViewController.swift; sourceTree = "<group>"; };
+		AD197C221E19F1BF002D334A /* HostelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostelTableViewCell.swift; sourceTree = "<group>"; };
+		AD197CED1E1F45A4002D334A /* ChuNha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChuNha.swift; sourceTree = "<group>"; };
+		AD197D7F1E20CE02002D334A /* EditHostelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditHostelViewController.swift; sourceTree = "<group>"; };
+		AD197D811E271272002D334A /* NhaTro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NhaTro.swift; sourceTree = "<group>"; };
+		AD1B60591E2B696B00DB6AD9 /* EditRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditRoomViewController.swift; sourceTree = "<group>"; };
+		AD4970EC1E17E84500D27447 /* RentRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RentRoomViewController.swift; sourceTree = "<group>"; };
+		AD4970EE1E17EFDD00D27447 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		AD4970F11E17F18B00D27447 /* Definition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Definition.swift; sourceTree = "<group>"; };
+		AD4AED5B1E271EBA00DD02E8 /* HostelTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostelTableViewController.swift; sourceTree = "<group>"; };
+		AD879EE41E154E5500D5E154 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		AD91E6991E10229400629F35 /* Hostel Management.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hostel Management.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD91E69C1E10229400629F35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AD91E69E1E10229400629F35 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AD91E6A41E10229400629F35 /* Hostel_Management.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Hostel_Management.xcdatamodel; sourceTree = "<group>"; };
+		AD91E6A61E10229400629F35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AD91E6A91E10229400629F35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AD91E6AB1E10229400629F35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD91E6B01E10229400629F35 /* Hostel ManagementTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hostel ManagementTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD91E6B41E10229400629F35 /* Hostel_ManagementTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hostel_ManagementTests.swift; sourceTree = "<group>"; };
+		AD91E6B61E10229400629F35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD91E6BB1E10229400629F35 /* Hostel ManagementUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hostel ManagementUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD91E6BF1E10229400629F35 /* Hostel_ManagementUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hostel_ManagementUITests.swift; sourceTree = "<group>"; };
+		AD91E6C11E10229400629F35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADAC7C291E15476C00641F9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ADD9CB4B1E140E340051F63B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DE1ED603C5E16F8546FA9546 /* Pods-Hostel Management.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hostel Management.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hostel Management/Pods-Hostel Management.debug.xcconfig"; sourceTree = "<group>"; };
+		E6C3FE590C05B5080FC74062 /* Pods-Hostel Management.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hostel Management.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hostel Management/Pods-Hostel Management.release.xcconfig"; sourceTree = "<group>"; };
+		E89058DE7C4B533F8A833BE6 /* Pods_Hostel_ManagementTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hostel_ManagementTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AD91E6961E10229400629F35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD03FB8D1E2B87E50052B635 /* GaiaSDKUIKit.framework in Frameworks */,
+				ADC55B6F1E2B8FE400DEF952 /* GaiaSDKUIKit.framework in Frameworks */,
+				B5628E3C77A3445F64442040 /* Pods_Hostel_Management.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD91E6AD1E10229400629F35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1374D13B171410005715518E /* Pods_Hostel_ManagementTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD91E6B81E10229400629F35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0CE2C2E69D43BD0A69882A6 /* Pods_Hostel_ManagementUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		90FD6AB144B0190C81CB2933 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DE1ED603C5E16F8546FA9546 /* Pods-Hostel Management.debug.xcconfig */,
+				E6C3FE590C05B5080FC74062 /* Pods-Hostel Management.release.xcconfig */,
+				A15F3FEBB4DAEA471E4EF724 /* Pods-Hostel ManagementTests.debug.xcconfig */,
+				4C7CD629D3EA8563D13CABE3 /* Pods-Hostel ManagementTests.release.xcconfig */,
+				2F827F0A9B9D05D4F2A6EC2F /* Pods-Hostel ManagementUITests.debug.xcconfig */,
+				5D47286107D3A74633B28E89 /* Pods-Hostel ManagementUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AD197C831E1F2B2D002D334A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AD197CED1E1F45A4002D334A /* ChuNha.swift */,
+				AD197D811E271272002D334A /* NhaTro.swift */,
+				AD18FAF81E2AFB06007175E8 /* PhongTro.swift */,
+				AD18FAFE1E2B2243007175E8 /* NguoiThueTro.swift */,
+				AD18FB001E2B2550007175E8 /* HoSoNhanKhau.swift */,
+				AD18FB021E2B2965007175E8 /* DichVuSinhHoat.swift */,
+				AD18FB041E2B2CAF007175E8 /* HoaDon.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		AD197CBC1E1F2FDE002D334A /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				AD18FACC1E290FA9007175E8 /* HoaDonDB+CoreDataClass.swift */,
+				AD18FACD1E290FA9007175E8 /* HoaDonDB+CoreDataProperties.swift */,
+				AD18FACE1E290FA9007175E8 /* DichVuSinhHoatDB+CoreDataClass.swift */,
+				AD18FACF1E290FA9007175E8 /* DichVuSinhHoatDB+CoreDataProperties.swift */,
+				AD18FAD01E290FA9007175E8 /* HoSoNhanKhauDB+CoreDataClass.swift */,
+				AD18FAD11E290FA9007175E8 /* HoSoNhanKhauDB+CoreDataProperties.swift */,
+				AD18FAD21E290FA9007175E8 /* NhaTroDB+CoreDataClass.swift */,
+				AD18FAD31E290FA9007175E8 /* NhaTroDB+CoreDataProperties.swift */,
+				AD18FAD41E290FA9007175E8 /* TinhTrangDB+CoreDataClass.swift */,
+				AD18FAD51E290FA9007175E8 /* TinhTrangDB+CoreDataProperties.swift */,
+				AD18FAD61E290FA9007175E8 /* HinhAnhPhongDB+CoreDataClass.swift */,
+				AD18FAD71E290FA9007175E8 /* HinhAnhPhongDB+CoreDataProperties.swift */,
+				AD18FAD81E290FA9007175E8 /* ChuNhaDB+CoreDataClass.swift */,
+				AD18FAD91E290FA9007175E8 /* ChuNhaDB+CoreDataProperties.swift */,
+				AD18FADA1E290FA9007175E8 /* LoaiDichVuDB+CoreDataClass.swift */,
+				AD18FADB1E290FA9007175E8 /* LoaiDichVuDB+CoreDataProperties.swift */,
+				AD18FADC1E290FA9007175E8 /* NguoiThueTroDB+CoreDataClass.swift */,
+				AD18FADD1E290FA9007175E8 /* NguoiThueTroDB+CoreDataProperties.swift */,
+				AD18FADE1E290FA9007175E8 /* PhongDB+CoreDataClass.swift */,
+				AD18FADF1E290FA9007175E8 /* PhongDB+CoreDataProperties.swift */,
+				AD18FAE01E290FA9007175E8 /* GioiTinhDB+CoreDataClass.swift */,
+				AD18FAE11E290FA9007175E8 /* GioiTinhDB+CoreDataProperties.swift */,
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
+		AD4970EB1E17D8F500D27447 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AD197C161E181379002D334A /* FirstSceneViewController.swift */,
+				AD91E69E1E10229400629F35 /* LoginViewController.swift */,
+				AD879EE41E154E5500D5E154 /* CreateAccountViewController.swift */,
+				AD4970EE1E17EFDD00D27447 /* MainViewController.swift */,
+				AD4970EC1E17E84500D27447 /* RentRoomViewController.swift */,
+				AD197C1C1E18EF51002D334A /* AccountViewController.swift */,
+				AD197C1E1E194E48002D334A /* EditAccountViewController.swift */,
+				AD197C201E1958BD002D334A /* EditPasswordViewController.swift */,
+				AD4AED5B1E271EBA00DD02E8 /* HostelTableViewController.swift */,
+				AD197C221E19F1BF002D334A /* HostelTableViewCell.swift */,
+				AD197D7F1E20CE02002D334A /* EditHostelViewController.swift */,
+				AD18FAFC1E2B0E6A007175E8 /* RoomTableViewController.swift */,
+				AD18FAFA1E2B0E1C007175E8 /* RoomTableViewCell.swift */,
+				AD1B60591E2B696B00DB6AD9 /* EditRoomViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		AD4970F01E17F16400D27447 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				AD4970F11E17F18B00D27447 /* Definition.swift */,
+				AD197C1A1E18C861002D334A /* SupportingMethods.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		AD91E6901E10229400629F35 = {
+			isa = PBXGroup;
+			children = (
+				AD03FB8C1E2B87E50052B635 /* GaiaSDKUIKit.framework */,
+				AD91E69B1E10229400629F35 /* Hostel Management */,
+				AD91E6B31E10229400629F35 /* Hostel ManagementTests */,
+				AD91E6BE1E10229400629F35 /* Hostel ManagementUITests */,
+				AD91E69A1E10229400629F35 /* Products */,
+				ADD9CB4A1E140E340051F63B /* Frameworks */,
+				90FD6AB144B0190C81CB2933 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		AD91E69A1E10229400629F35 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AD91E6991E10229400629F35 /* Hostel Management.app */,
+				AD91E6B01E10229400629F35 /* Hostel ManagementTests.xctest */,
+				AD91E6BB1E10229400629F35 /* Hostel ManagementUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AD91E69B1E10229400629F35 /* Hostel Management */ = {
+			isa = PBXGroup;
+			children = (
+				AD197CBC1E1F2FDE002D334A /* Database */,
+				AD197C831E1F2B2D002D334A /* Classes */,
+				AD4970F01E17F16400D27447 /* Utilities */,
+				AD4970EB1E17D8F500D27447 /* ViewController */,
+				ADAC7C281E15476C00641F9A /* Main.storyboard */,
+				AD91E69C1E10229400629F35 /* AppDelegate.swift */,
+				AD91E6A61E10229400629F35 /* Assets.xcassets */,
+				AD91E6A81E10229400629F35 /* LaunchScreen.storyboard */,
+				AD91E6AB1E10229400629F35 /* Info.plist */,
+				AD91E6A31E10229400629F35 /* Hostel_Management.xcdatamodeld */,
+			);
+			path = "Hostel Management";
+			sourceTree = "<group>";
+		};
+		AD91E6B31E10229400629F35 /* Hostel ManagementTests */ = {
+			isa = PBXGroup;
+			children = (
+				AD91E6B41E10229400629F35 /* Hostel_ManagementTests.swift */,
+				AD91E6B61E10229400629F35 /* Info.plist */,
+			);
+			path = "Hostel ManagementTests";
+			sourceTree = "<group>";
+		};
+		AD91E6BE1E10229400629F35 /* Hostel ManagementUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AD91E6BF1E10229400629F35 /* Hostel_ManagementUITests.swift */,
+				AD91E6C11E10229400629F35 /* Info.plist */,
+			);
+			path = "Hostel ManagementUITests";
+			sourceTree = "<group>";
+		};
+		ADD9CB4A1E140E340051F63B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ADD9CB4B1E140E340051F63B /* UIKit.framework */,
+				A2349055DC21858BAF47657E /* Pods_Hostel_Management.framework */,
+				E89058DE7C4B533F8A833BE6 /* Pods_Hostel_ManagementTests.framework */,
+				683CF313C16DEADBC4124AEC /* Pods_Hostel_ManagementUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AD91E6981E10229400629F35 /* Hostel Management */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD91E6C41E10229400629F35 /* Build configuration list for PBXNativeTarget "Hostel Management" */;
+			buildPhases = (
+				226D73C8C214EB0CB16C4936 /* [CP] Check Pods Manifest.lock */,
+				AD91E6951E10229400629F35 /* Sources */,
+				AD91E6961E10229400629F35 /* Frameworks */,
+				AD91E6971E10229400629F35 /* Resources */,
+				ADD9CB6B1E1417090051F63B /* Embed Frameworks */,
+				9F0C503E111E4A17438875DA /* [CP] Embed Pods Frameworks */,
+				0DD1E2DDF74F1D154B0F7994 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Hostel Management";
+			productName = "Hostel Management";
+			productReference = AD91E6991E10229400629F35 /* Hostel Management.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AD91E6AF1E10229400629F35 /* Hostel ManagementTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD91E6C71E10229400629F35 /* Build configuration list for PBXNativeTarget "Hostel ManagementTests" */;
+			buildPhases = (
+				1C42CBF14D6DB2AC869D868B /* [CP] Check Pods Manifest.lock */,
+				AD91E6AC1E10229400629F35 /* Sources */,
+				AD91E6AD1E10229400629F35 /* Frameworks */,
+				AD91E6AE1E10229400629F35 /* Resources */,
+				B2D582E478942B09FF04D8DB /* [CP] Embed Pods Frameworks */,
+				52EC1B754C17779EB1925085 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AD91E6B21E10229400629F35 /* PBXTargetDependency */,
+			);
+			name = "Hostel ManagementTests";
+			productName = "Hostel ManagementTests";
+			productReference = AD91E6B01E10229400629F35 /* Hostel ManagementTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AD91E6BA1E10229400629F35 /* Hostel ManagementUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD91E6CA1E10229400629F35 /* Build configuration list for PBXNativeTarget "Hostel ManagementUITests" */;
+			buildPhases = (
+				40E10F1D91580FEA761BDFFF /* [CP] Check Pods Manifest.lock */,
+				AD91E6B71E10229400629F35 /* Sources */,
+				AD91E6B81E10229400629F35 /* Frameworks */,
+				AD91E6B91E10229400629F35 /* Resources */,
+				42883581DF86F440F15D39CF /* [CP] Embed Pods Frameworks */,
+				8AA4DB88AA3002DD6BFBE8FD /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AD91E6BD1E10229400629F35 /* PBXTargetDependency */,
+			);
+			name = "Hostel ManagementUITests";
+			productName = "Hostel ManagementUITests";
+			productReference = AD91E6BB1E10229400629F35 /* Hostel ManagementUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AD91E6911E10229400629F35 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = chuonghuynh;
+				TargetAttributes = {
+					AD91E6981E10229400629F35 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = M3R5747G42;
+						ProvisioningStyle = Automatic;
+					};
+					AD91E6AF1E10229400629F35 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = V89MEC28GE;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AD91E6981E10229400629F35;
+					};
+					AD91E6BA1E10229400629F35 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = V89MEC28GE;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AD91E6981E10229400629F35;
+					};
+				};
+			};
+			buildConfigurationList = AD91E6941E10229400629F35 /* Build configuration list for PBXProject "Hostel Management" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AD91E6901E10229400629F35;
+			productRefGroup = AD91E69A1E10229400629F35 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AD91E6981E10229400629F35 /* Hostel Management */,
+				AD91E6AF1E10229400629F35 /* Hostel ManagementTests */,
+				AD91E6BA1E10229400629F35 /* Hostel ManagementUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AD91E6971E10229400629F35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADAC7C2A1E15476C00641F9A /* Main.storyboard in Resources */,
+				AD91E6AA1E10229400629F35 /* LaunchScreen.storyboard in Resources */,
+				AD91E6A71E10229400629F35 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD91E6AE1E10229400629F35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD91E6B91E10229400629F35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0DD1E2DDF74F1D154B0F7994 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hostel Management/Pods-Hostel Management-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1C42CBF14D6DB2AC869D868B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		226D73C8C214EB0CB16C4936 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		40E10F1D91580FEA761BDFFF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		42883581DF86F440F15D39CF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hostel ManagementUITests/Pods-Hostel ManagementUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52EC1B754C17779EB1925085 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hostel ManagementTests/Pods-Hostel ManagementTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8AA4DB88AA3002DD6BFBE8FD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hostel ManagementUITests/Pods-Hostel ManagementUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F0C503E111E4A17438875DA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hostel Management/Pods-Hostel Management-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2D582E478942B09FF04D8DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hostel ManagementTests/Pods-Hostel ManagementTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AD91E6951E10229400629F35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD1261431E2B844F00A4D285 /* (null) in Sources */,
+				AD18FB011E2B2550007175E8 /* HoSoNhanKhau.swift in Sources */,
+				AD197CEE1E1F45A4002D334A /* ChuNha.swift in Sources */,
+				AD18FB051E2B2CAF007175E8 /* HoaDon.swift in Sources */,
+				AD4970ED1E17E84500D27447 /* RentRoomViewController.swift in Sources */,
+				AD879EE51E154E5500D5E154 /* CreateAccountViewController.swift in Sources */,
+				AD4970F21E17F18B00D27447 /* Definition.swift in Sources */,
+				AD18FAFB1E2B0E1C007175E8 /* RoomTableViewCell.swift in Sources */,
+				AD91E69F1E10229400629F35 /* LoginViewController.swift in Sources */,
+				AD18FAE91E290FA9007175E8 /* NhaTroDB+CoreDataProperties.swift in Sources */,
+				AD4970EF1E17EFDD00D27447 /* MainViewController.swift in Sources */,
+				AD18FAE41E290FA9007175E8 /* DichVuSinhHoatDB+CoreDataClass.swift in Sources */,
+				AD197C1F1E194E48002D334A /* EditAccountViewController.swift in Sources */,
+				AD18FAEC1E290FA9007175E8 /* HinhAnhPhongDB+CoreDataClass.swift in Sources */,
+				AD18FAF21E290FAA007175E8 /* NguoiThueTroDB+CoreDataClass.swift in Sources */,
+				AD18FAED1E290FA9007175E8 /* HinhAnhPhongDB+CoreDataProperties.swift in Sources */,
+				AD4AED5C1E271EBA00DD02E8 /* HostelTableViewController.swift in Sources */,
+				AD18FAEE1E290FA9007175E8 /* ChuNhaDB+CoreDataClass.swift in Sources */,
+				AD197D821E271272002D334A /* NhaTro.swift in Sources */,
+				AD18FAE31E290FA9007175E8 /* HoaDonDB+CoreDataProperties.swift in Sources */,
+				AD18FAF61E290FAA007175E8 /* GioiTinhDB+CoreDataClass.swift in Sources */,
+				AD91E69D1E10229400629F35 /* AppDelegate.swift in Sources */,
+				AD18FB031E2B2965007175E8 /* DichVuSinhHoat.swift in Sources */,
+				AD18FAE61E290FA9007175E8 /* HoSoNhanKhauDB+CoreDataClass.swift in Sources */,
+				AD18FAF31E290FAA007175E8 /* NguoiThueTroDB+CoreDataProperties.swift in Sources */,
+				AD1B605A1E2B696B00DB6AD9 /* EditRoomViewController.swift in Sources */,
+				AD18FAF71E290FAA007175E8 /* GioiTinhDB+CoreDataProperties.swift in Sources */,
+				AD18FAE81E290FA9007175E8 /* NhaTroDB+CoreDataClass.swift in Sources */,
+				AD197C1D1E18EF51002D334A /* AccountViewController.swift in Sources */,
+				AD18FAE51E290FA9007175E8 /* DichVuSinhHoatDB+CoreDataProperties.swift in Sources */,
+				AD197C171E181379002D334A /* FirstSceneViewController.swift in Sources */,
+				AD197D801E20CE02002D334A /* EditHostelViewController.swift in Sources */,
+				AD18FAF11E290FAA007175E8 /* LoaiDichVuDB+CoreDataProperties.swift in Sources */,
+				AD18FAEF1E290FA9007175E8 /* ChuNhaDB+CoreDataProperties.swift in Sources */,
+				AD18FAEA1E290FA9007175E8 /* TinhTrangDB+CoreDataClass.swift in Sources */,
+				AD18FAE71E290FA9007175E8 /* HoSoNhanKhauDB+CoreDataProperties.swift in Sources */,
+				AD18FAFF1E2B2243007175E8 /* NguoiThueTro.swift in Sources */,
+				AD18FAF51E290FAA007175E8 /* PhongDB+CoreDataProperties.swift in Sources */,
+				AD18FAF41E290FAA007175E8 /* PhongDB+CoreDataClass.swift in Sources */,
+				AD197C1B1E18C861002D334A /* SupportingMethods.swift in Sources */,
+				AD18FAF01E290FAA007175E8 /* LoaiDichVuDB+CoreDataClass.swift in Sources */,
+				AD18FAF91E2AFB06007175E8 /* PhongTro.swift in Sources */,
+				AD18FAFD1E2B0E6A007175E8 /* RoomTableViewController.swift in Sources */,
+				AD18FAE21E290FA9007175E8 /* HoaDonDB+CoreDataClass.swift in Sources */,
+				AD197C211E1958BD002D334A /* EditPasswordViewController.swift in Sources */,
+				AD18FAEB1E290FA9007175E8 /* TinhTrangDB+CoreDataProperties.swift in Sources */,
+				AD197C231E19F1BF002D334A /* HostelTableViewCell.swift in Sources */,
+				AD91E6A51E10229400629F35 /* Hostel_Management.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD91E6AC1E10229400629F35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD91E6B51E10229400629F35 /* Hostel_ManagementTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD91E6B71E10229400629F35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD91E6C01E10229400629F35 /* Hostel_ManagementUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AD91E6B21E10229400629F35 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD91E6981E10229400629F35 /* Hostel Management */;
+			targetProxy = AD91E6B11E10229400629F35 /* PBXContainerItemProxy */;
+		};
+		AD91E6BD1E10229400629F35 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD91E6981E10229400629F35 /* Hostel Management */;
+			targetProxy = AD91E6BC1E10229400629F35 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AD91E6A81E10229400629F35 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD91E6A91E10229400629F35 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		ADAC7C281E15476C00641F9A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADAC7C291E15476C00641F9A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AD91E6C21E10229400629F35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AD91E6C31E10229400629F35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AD91E6C51E10229400629F35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE1ED603C5E16F8546FA9546 /* Pods-Hostel Management.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: minhchuong.itus@icloud.com (UZNR2TUUY2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = M3R5747G42;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Hostel\\ Management",
+					"$(PROJECT_DIR)/Hostel\\ Management",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Hostel\\ Management",
+					"$(PROJECT_DIR)/Hostel\\ Management",
+					"$(PROJECT_DIR)/Hostel\\ Management",
+				);
+				INFOPLIST_FILE = "Hostel Management/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chuonghuynh.hostelmanagement;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		AD91E6C61E10229400629F35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6C3FE590C05B5080FC74062 /* Pods-Hostel Management.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: minhchuong.itus@icloud.com (UZNR2TUUY2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = M3R5747G42;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Hostel\\ Management",
+					"$(PROJECT_DIR)/Hostel\\ Management",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Hostel\\ Management",
+					"$(PROJECT_DIR)/Hostel\\ Management",
+					"$(PROJECT_DIR)/Hostel\\ Management",
+				);
+				INFOPLIST_FILE = "Hostel Management/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chuonghuynh.hostelmanagement;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		AD91E6C81E10229400629F35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A15F3FEBB4DAEA471E4EF724 /* Pods-Hostel ManagementTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = V89MEC28GE;
+				INFOPLIST_FILE = "Hostel ManagementTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chuonghuynh.Hostel-ManagementTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hostel Management.app/Hostel Management";
+			};
+			name = Debug;
+		};
+		AD91E6C91E10229400629F35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C7CD629D3EA8563D13CABE3 /* Pods-Hostel ManagementTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = V89MEC28GE;
+				INFOPLIST_FILE = "Hostel ManagementTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chuonghuynh.Hostel-ManagementTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hostel Management.app/Hostel Management";
+			};
+			name = Release;
+		};
+		AD91E6CB1E10229400629F35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F827F0A9B9D05D4F2A6EC2F /* Pods-Hostel ManagementUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = V89MEC28GE;
+				INFOPLIST_FILE = "Hostel ManagementUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chuonghuynh.Hostel-ManagementUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Hostel Management";
+			};
+			name = Debug;
+		};
+		AD91E6CC1E10229400629F35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D47286107D3A74633B28E89 /* Pods-Hostel ManagementUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = V89MEC28GE;
+				INFOPLIST_FILE = "Hostel ManagementUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chuonghuynh.Hostel-ManagementUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Hostel Management";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AD91E6941E10229400629F35 /* Build configuration list for PBXProject "Hostel Management" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD91E6C21E10229400629F35 /* Debug */,
+				AD91E6C31E10229400629F35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD91E6C41E10229400629F35 /* Build configuration list for PBXNativeTarget "Hostel Management" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD91E6C51E10229400629F35 /* Debug */,
+				AD91E6C61E10229400629F35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD91E6C71E10229400629F35 /* Build configuration list for PBXNativeTarget "Hostel ManagementTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD91E6C81E10229400629F35 /* Debug */,
+				AD91E6C91E10229400629F35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD91E6CA1E10229400629F35 /* Build configuration list for PBXNativeTarget "Hostel ManagementUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD91E6CB1E10229400629F35 /* Debug */,
+				AD91E6CC1E10229400629F35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AD91E6A31E10229400629F35 /* Hostel_Management.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AD91E6A41E10229400629F35 /* Hostel_Management.xcdatamodel */,
+			);
+			currentVersion = AD91E6A41E10229400629F35 /* Hostel_Management.xcdatamodel */;
+			path = Hostel_Management.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AD91E6911E10229400629F35 /* Project object */;
+}

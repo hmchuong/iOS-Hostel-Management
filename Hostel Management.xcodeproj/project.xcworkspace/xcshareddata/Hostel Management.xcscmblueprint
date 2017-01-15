@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "3324BFBF9B05478364A4501FC46272857BC204B2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3324BFBF9B05478364A4501FC46272857BC204B2" : 9223372036854775807,
+    "541CD0FDA8A81C0F66657F342C53BACADD2EC2C8" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B11F4267-A5FD-4D07-9FC2-7E2D04F293FE",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3324BFBF9B05478364A4501FC46272857BC204B2" : "Hostel%20Management\/",
+    "541CD0FDA8A81C0F66657F342C53BACADD2EC2C8" : "GaiaUIKit\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Hostel Management",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Hostel Management.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/hmchuong\/iOS-Hostel-Management.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3324BFBF9B05478364A4501FC46272857BC204B2"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/windylee\/GaiaUIKit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "541CD0FDA8A81C0F66657F342C53BACADD2EC2C8"
+    }
+  ]
+}
