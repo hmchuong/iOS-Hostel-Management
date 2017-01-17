@@ -2,7 +2,7 @@
 //  GioiTinhDB+CoreDataProperties.swift
 //  Hostel Management
 //
-//  Created by Huỳnh Minh Chương on 1/13/17.
+//  Created by Huỳnh Minh Chương on 1/16/17.
 //  Copyright © 2017 chuonghuynh. All rights reserved.
 //
 
@@ -17,5 +17,6 @@ extension GioiTinhDB {
     }
 
     @NSManaged public var mota: String?
+    @NSManaged public var magioitinh: Int16
 
 }

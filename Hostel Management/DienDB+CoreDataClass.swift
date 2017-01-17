@@ -1,5 +1,5 @@
 //
-//  NhaTroDB+CoreDataClass.swift
+//  DienDB+CoreDataClass.swift
 //  Hostel Management
 //
 //  Created by Huỳnh Minh Chương on 1/16/17.
@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-@objc(NhaTroDB)
-public class NhaTroDB: NSManagedObject {
+@objc(DienDB)
+public class DienDB: NSManagedObject {
 
 }

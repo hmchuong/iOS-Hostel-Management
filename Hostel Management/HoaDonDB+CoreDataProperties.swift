@@ -2,7 +2,7 @@
 //  HoaDonDB+CoreDataProperties.swift
 //  Hostel Management
 //
-//  Created by Huỳnh Minh Chương on 1/13/17.
+//  Created by Huỳnh Minh Chương on 1/16/17.
 //  Copyright © 2017 chuonghuynh. All rights reserved.
 //
 
@@ -17,25 +17,8 @@ extension HoaDonDB {
     }
 
     @NSManaged public var dathanhtoan: Bool
-    @NSManaged public var mahoadon: Int64
-    @NSManaged public var mota: String?
-    @NSManaged public var dichvusinhhoat: NSSet?
-
-}
-
-// MARK: Generated accessors for dichvusinhhoat
-extension HoaDonDB {
-
-    @objc(addDichvusinhhoatObject:)
-    @NSManaged public func addToDichvusinhhoat(_ value: DichVuSinhHoatDB)
-
-    @objc(removeDichvusinhhoatObject:)
-    @NSManaged public func removeFromDichvusinhhoat(_ value: DichVuSinhHoatDB)
-
-    @objc(addDichvusinhhoat:)
-    @NSManaged public func addToDichvusinhhoat(_ values: NSSet)
-
-    @objc(removeDichvusinhhoat:)
-    @NSManaged public func removeFromDichvusinhhoat(_ values: NSSet)
+    @NSManaged public var mahoadon: String?
+    @NSManaged public var ghichu: String?
+    @NSManaged public var maphong: String?
 
 }

@@ -2,7 +2,7 @@
 //  HinhAnhPhongDB+CoreDataProperties.swift
 //  Hostel Management
 //
-//  Created by Huỳnh Minh Chương on 1/13/17.
+//  Created by Huỳnh Minh Chương on 1/16/17.
 //  Copyright © 2017 chuonghuynh. All rights reserved.
 //
 
@@ -17,5 +17,7 @@ extension HinhAnhPhongDB {
     }
 
     @NSManaged public var anh: NSData?
+    @NSManaged public var mahinhanh: Int16
+    @NSManaged public var maphong: String?
 
 }

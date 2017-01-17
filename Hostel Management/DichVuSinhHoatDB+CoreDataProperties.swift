@@ -2,7 +2,7 @@
 //  DichVuSinhHoatDB+CoreDataProperties.swift
 //  Hostel Management
 //
-//  Created by Huỳnh Minh Chương on 1/13/17.
+//  Created by Huỳnh Minh Chương on 1/16/17.
 //  Copyright © 2017 chuonghuynh. All rights reserved.
 //
 
@@ -16,10 +16,9 @@ extension DichVuSinhHoatDB {
         return NSFetchRequest<DichVuSinhHoatDB>(entityName: "DichVuSinhHoat");
     }
 
-    @NSManaged public var chisocu: Int64
-    @NSManaged public var chisomoi: Int64
     @NSManaged public var thang: Int16
     @NSManaged public var tongtien: NSDecimalNumber?
-    @NSManaged public var loaidichvu: LoaiDichVuDB?
+    @NSManaged public var madichvu: Int32
+    @NSManaged public var mahoadon: String?
 
 }

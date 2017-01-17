@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-class NguoiThueTro{
+class TaiKhoanPhong{
     var id: String
     var matoken: String
     
