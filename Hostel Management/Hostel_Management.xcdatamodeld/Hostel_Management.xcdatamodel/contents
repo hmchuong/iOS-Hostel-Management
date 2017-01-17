@@ -6,64 +6,70 @@
         <attribute name="matkhau" attributeType="String" syncable="YES"/>
         <attribute name="sodienthoai" optional="YES" attributeType="String" defaultValueString="0" syncable="YES"/>
         <attribute name="tendangnhap" attributeType="String" syncable="YES"/>
-        <relationship name="nhatro" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="NhaTro" inverseName="chunha" inverseEntity="NhaTro" syncable="YES"/>
     </entity>
     <entity name="DichVuSinhHoat" representedClassName="DichVuSinhHoatDB" syncable="YES">
-        <attribute name="chisocu" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="chisomoi" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="madichvu" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="mahoadon" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="thang" optional="YES" attributeType="Integer 16" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="tongtien" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
-        <relationship name="loaidichvu" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="LoaiDichVu" syncable="YES"/>
+    </entity>
+    <entity name="Dien" representedClassName="DienDB" syncable="YES">
+        <attribute name="chisocu" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="chisomoi" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="madichvu" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="mahoadon" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="GioiTinh" representedClassName="GioiTinhDB" syncable="YES">
+        <attribute name="magioitinh" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="mota" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="HinhAnhPhong" representedClassName="HinhAnhPhongDB" syncable="YES">
         <attribute name="anh" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="mahinhanh" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="maphong" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="HoaDon" representedClassName="HoaDonDB" syncable="YES">
         <attribute name="dathanhtoan" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="mahoadon" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="mota" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="dichvusinhhoat" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="DichVuSinhHoat" syncable="YES"/>
+        <attribute name="ghichu" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mahoadon" attributeType="String" syncable="YES"/>
+        <attribute name="maphong" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="HoSoNhanKhau" representedClassName="HoSoNhanKhauDB" syncable="YES">
         <attribute name="cmnd" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="diachithuongtru" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gioitinh" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="hoten" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="id" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="mahoso" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="ngaysinh" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="nghenghiep" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phong" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="quequan" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sodienthoai" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="gioitinh" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="GioiTinh" syncable="YES"/>
-        <relationship name="phong" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Phong" inverseName="hosonhankhau" inverseEntity="Phong" syncable="YES"/>
-    </entity>
-    <entity name="LoaiDichVu" representedClassName="LoaiDichVuDB" syncable="YES">
-        <attribute name="ten" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="NguoiThueTro" representedClassName="NguoiThueTroDB" syncable="YES">
         <attribute name="id" attributeType="String" syncable="YES"/>
         <attribute name="matoken" attributeType="String" syncable="YES"/>
-        <relationship name="phong" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Phong" inverseName="nguoithue" inverseEntity="Phong" syncable="YES"/>
     </entity>
     <entity name="NhaTro" representedClassName="NhaTroDB" syncable="YES">
+        <attribute name="chunha" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="diachi" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="sophong" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="manhatro" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="ten" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="chunha" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ChuNha" inverseName="nhatro" inverseEntity="ChuNha" syncable="YES"/>
-        <relationship name="phongtro" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Phong" inverseName="nhatro" inverseEntity="Phong" syncable="YES"/>
+    </entity>
+    <entity name="Nuoc" representedClassName="NuocDB" syncable="YES">
+        <attribute name="chisocu" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="chisomoi" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="madichvu" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="mahoadon" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Phong" representedClassName="PhongDB" syncable="YES">
         <attribute name="dientich" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="giaphong" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="maphong" attributeType="String" syncable="YES"/>
-        <relationship name="hinhanhphong" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="HinhAnhPhong" syncable="YES"/>
-        <relationship name="hoadon" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="HoaDon" syncable="YES"/>
-        <relationship name="hosonhankhau" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="HoSoNhanKhau" inverseName="phong" inverseEntity="HoSoNhanKhau" syncable="YES"/>
-        <relationship name="nguoithue" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="NguoiThueTro" inverseName="phong" inverseEntity="NguoiThueTro" syncable="YES"/>
-        <relationship name="nhatro" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="NhaTro" inverseName="phongtro" inverseEntity="NhaTro" syncable="YES"/>
-        <relationship name="tinhtrang" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="TinhTrang" syncable="YES"/>
+        <attribute name="nguoithue" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nhatro" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ten" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tinhtrang" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="ThamSo" representedClassName="ThamSoDB" syncable="YES">
         <attribute name="giatri" optional="YES" attributeType="String" syncable="YES"/>
@@ -73,20 +79,22 @@
         <attribute name="tinhtrang" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="TinhTrang" representedClassName="TinhTrangDB" syncable="YES">
+        <attribute name="matinhtrang" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="mota" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="ChuNha" positionX="673" positionY="438" width="128" height="133"/>
-        <element name="DichVuSinhHoat" positionX="-315" positionY="314" width="128" height="118"/>
-        <element name="GioiTinh" positionX="448" positionY="279" width="128" height="58"/>
-        <element name="HinhAnhPhong" positionX="-74" positionY="180" width="128" height="58"/>
+        <element name="ChuNha" positionX="673" positionY="438" width="128" height="118"/>
+        <element name="DichVuSinhHoat" positionX="-315" positionY="314" width="128" height="103"/>
+        <element name="GioiTinh" positionX="448" positionY="279" width="128" height="73"/>
+        <element name="HinhAnhPhong" positionX="-74" positionY="180" width="128" height="88"/>
         <element name="HoaDon" positionX="-153" positionY="279" width="128" height="103"/>
         <element name="HoSoNhanKhau" positionX="295" positionY="252" width="128" height="193"/>
-        <element name="LoaiDichVu" positionX="-414" positionY="491" width="128" height="58"/>
-        <element name="NguoiThueTro" positionX="-189" positionY="531" width="128" height="88"/>
-        <element name="NhaTro" positionX="439" positionY="459" width="128" height="118"/>
-        <element name="Phong" positionX="18" positionY="311" width="128" height="178"/>
+        <element name="NguoiThueTro" positionX="-189" positionY="531" width="128" height="73"/>
+        <element name="NhaTro" positionX="439" positionY="459" width="128" height="103"/>
+        <element name="Phong" positionX="18" positionY="311" width="128" height="148"/>
         <element name="ThamSo" positionX="441" positionY="134" width="128" height="118"/>
-        <element name="TinhTrang" positionX="153" positionY="558" width="128" height="58"/>
+        <element name="TinhTrang" positionX="153" positionY="558" width="128" height="73"/>
+        <element name="Dien" positionX="-144" positionY="297" width="128" height="103"/>
+        <element name="Nuoc" positionX="-135" positionY="306" width="128" height="103"/>
     </elements>
 </model>

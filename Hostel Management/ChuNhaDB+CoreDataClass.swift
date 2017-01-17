@@ -11,5 +11,5 @@ import CoreData
 
 @objc(ChuNhaDB)
 public class ChuNhaDB: NSManagedObject {
-
+    
 }

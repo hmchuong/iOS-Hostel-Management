@@ -9,36 +9,12 @@
 /* Begin PBXBuildFile section */
 		1374D13B171410005715518E /* Pods_Hostel_ManagementTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89058DE7C4B533F8A833BE6 /* Pods_Hostel_ManagementTests.framework */; };
 		A0CE2C2E69D43BD0A69882A6 /* Pods_Hostel_ManagementUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 683CF313C16DEADBC4124AEC /* Pods_Hostel_ManagementUITests.framework */; };
-		AD03FB8D1E2B87E50052B635 /* GaiaSDKUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD03FB8C1E2B87E50052B635 /* GaiaSDKUIKit.framework */; };
-		AD03FB8E1E2B87E50052B635 /* GaiaSDKUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AD03FB8C1E2B87E50052B635 /* GaiaSDKUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AD1261421E2B840400A4D285 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AD1261431E2B844F00A4D285 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		AD18FAE21E290FA9007175E8 /* HoaDonDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FACC1E290FA9007175E8 /* HoaDonDB+CoreDataClass.swift */; };
-		AD18FAE31E290FA9007175E8 /* HoaDonDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FACD1E290FA9007175E8 /* HoaDonDB+CoreDataProperties.swift */; };
-		AD18FAE41E290FA9007175E8 /* DichVuSinhHoatDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FACE1E290FA9007175E8 /* DichVuSinhHoatDB+CoreDataClass.swift */; };
-		AD18FAE51E290FA9007175E8 /* DichVuSinhHoatDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FACF1E290FA9007175E8 /* DichVuSinhHoatDB+CoreDataProperties.swift */; };
-		AD18FAE61E290FA9007175E8 /* HoSoNhanKhauDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FAD01E290FA9007175E8 /* HoSoNhanKhauDB+CoreDataClass.swift */; };
-		AD18FAE71E290FA9007175E8 /* HoSoNhanKhauDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FAD11E290FA9007175E8 /* HoSoNhanKhauDB+CoreDataProperties.swift */; };
-		AD18FAE81E290FA9007175E8 /* NhaTroDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FAD21E290FA9007175E8 /* NhaTroDB+CoreDataClass.swift */; };
-		AD18FAE91E290FA9007175E8 /* NhaTroDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FAD31E290FA9007175E8 /* NhaTroDB+CoreDataProperties.swift */; };
-		AD18FAEA1E290FA9007175E8 /* TinhTrangDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FAD41E290FA9007175E8 /* TinhTrangDB+CoreDataClass.swift */; };
-		AD18FAEB1E290FA9007175E8 /* TinhTrangDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FAD51E290FA9007175E8 /* TinhTrangDB+CoreDataProperties.swift */; };
-		AD18FAEC1E290FA9007175E8 /* HinhAnhPhongDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FAD61E290FA9007175E8 /* HinhAnhPhongDB+CoreDataClass.swift */; };
-		AD18FAED1E290FA9007175E8 /* HinhAnhPhongDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FAD71E290FA9007175E8 /* HinhAnhPhongDB+CoreDataProperties.swift */; };
-		AD18FAEE1E290FA9007175E8 /* ChuNhaDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FAD81E290FA9007175E8 /* ChuNhaDB+CoreDataClass.swift */; };
-		AD18FAEF1E290FA9007175E8 /* ChuNhaDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FAD91E290FA9007175E8 /* ChuNhaDB+CoreDataProperties.swift */; };
-		AD18FAF01E290FAA007175E8 /* LoaiDichVuDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FADA1E290FA9007175E8 /* LoaiDichVuDB+CoreDataClass.swift */; };
-		AD18FAF11E290FAA007175E8 /* LoaiDichVuDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FADB1E290FA9007175E8 /* LoaiDichVuDB+CoreDataProperties.swift */; };
-		AD18FAF21E290FAA007175E8 /* NguoiThueTroDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FADC1E290FA9007175E8 /* NguoiThueTroDB+CoreDataClass.swift */; };
-		AD18FAF31E290FAA007175E8 /* NguoiThueTroDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FADD1E290FA9007175E8 /* NguoiThueTroDB+CoreDataProperties.swift */; };
-		AD18FAF41E290FAA007175E8 /* PhongDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FADE1E290FA9007175E8 /* PhongDB+CoreDataClass.swift */; };
-		AD18FAF51E290FAA007175E8 /* PhongDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FADF1E290FA9007175E8 /* PhongDB+CoreDataProperties.swift */; };
-		AD18FAF61E290FAA007175E8 /* GioiTinhDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FAE01E290FA9007175E8 /* GioiTinhDB+CoreDataClass.swift */; };
-		AD18FAF71E290FAA007175E8 /* GioiTinhDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FAE11E290FA9007175E8 /* GioiTinhDB+CoreDataProperties.swift */; };
-		AD18FAF91E2AFB06007175E8 /* PhongTro.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FAF81E2AFB06007175E8 /* PhongTro.swift */; };
+		AD18FAF91E2AFB06007175E8 /* Phong.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FAF81E2AFB06007175E8 /* Phong.swift */; };
 		AD18FAFB1E2B0E1C007175E8 /* RoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FAFA1E2B0E1C007175E8 /* RoomTableViewCell.swift */; };
 		AD18FAFD1E2B0E6A007175E8 /* RoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FAFC1E2B0E6A007175E8 /* RoomTableViewController.swift */; };
-		AD18FAFF1E2B2243007175E8 /* NguoiThueTro.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FAFE1E2B2243007175E8 /* NguoiThueTro.swift */; };
+		AD18FAFF1E2B2243007175E8 /* TaiKhoanPhong.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FAFE1E2B2243007175E8 /* TaiKhoanPhong.swift */; };
 		AD18FB011E2B2550007175E8 /* HoSoNhanKhau.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FB001E2B2550007175E8 /* HoSoNhanKhau.swift */; };
 		AD18FB031E2B2965007175E8 /* DichVuSinhHoat.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FB021E2B2965007175E8 /* DichVuSinhHoat.swift */; };
 		AD18FB051E2B2CAF007175E8 /* HoaDon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18FB041E2B2CAF007175E8 /* HoaDon.swift */; };
@@ -52,6 +28,14 @@
 		AD197D801E20CE02002D334A /* EditHostelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD197D7F1E20CE02002D334A /* EditHostelViewController.swift */; };
 		AD197D821E271272002D334A /* NhaTro.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD197D811E271272002D334A /* NhaTro.swift */; };
 		AD1B605A1E2B696B00DB6AD9 /* EditRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1B60591E2B696B00DB6AD9 /* EditRoomViewController.swift */; };
+		AD1F763D1E2D901800434D46 /* ThuePhong.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1F763C1E2D901800434D46 /* ThuePhong.swift */; };
+		AD1F763F1E2DA09800434D46 /* DichVuTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1F763E1E2DA09800434D46 /* DichVuTarget.swift */; };
+		AD1F76411E2DA33200434D46 /* DienAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1F76401E2DA33200434D46 /* DienAdapter.swift */; };
+		AD1F76431E2DA35F00434D46 /* Dien.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1F76421E2DA35F00434D46 /* Dien.swift */; };
+		AD1F76451E2DA74C00434D46 /* Nuoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1F76441E2DA74C00434D46 /* Nuoc.swift */; };
+		AD1F76471E2DA7E700434D46 /* Internet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1F76461E2DA7E700434D46 /* Internet.swift */; };
+		AD1F76491E2DAA2300434D46 /* NuocAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1F76481E2DAA2300434D46 /* NuocAdapter.swift */; };
+		AD1F764B1E2DAA5100434D46 /* InternetAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1F764A1E2DAA5100434D46 /* InternetAdapter.swift */; };
 		AD4970ED1E17E84500D27447 /* RentRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4970EC1E17E84500D27447 /* RentRoomViewController.swift */; };
 		AD4970EF1E17EFDD00D27447 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4970EE1E17EFDD00D27447 /* MainViewController.swift */; };
 		AD4970F21E17F18B00D27447 /* Definition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4970F11E17F18B00D27447 /* Definition.swift */; };
@@ -64,9 +48,35 @@
 		AD91E6AA1E10229400629F35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD91E6A81E10229400629F35 /* LaunchScreen.storyboard */; };
 		AD91E6B51E10229400629F35 /* Hostel_ManagementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD91E6B41E10229400629F35 /* Hostel_ManagementTests.swift */; };
 		AD91E6C01E10229400629F35 /* Hostel_ManagementUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD91E6BF1E10229400629F35 /* Hostel_ManagementUITests.swift */; };
+		AD9AAF841E2D14ED00EFCCCB /* ChuNhaDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9AAF6A1E2D14ED00EFCCCB /* ChuNhaDB+CoreDataClass.swift */; };
+		AD9AAF851E2D14ED00EFCCCB /* ChuNhaDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9AAF6B1E2D14ED00EFCCCB /* ChuNhaDB+CoreDataProperties.swift */; };
+		AD9AAF861E2D14ED00EFCCCB /* NguoiThueTroDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9AAF6C1E2D14ED00EFCCCB /* NguoiThueTroDB+CoreDataClass.swift */; };
+		AD9AAF871E2D14ED00EFCCCB /* NguoiThueTroDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9AAF6D1E2D14ED00EFCCCB /* NguoiThueTroDB+CoreDataProperties.swift */; };
+		AD9AAF881E2D14ED00EFCCCB /* HoaDonDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9AAF6E1E2D14ED00EFCCCB /* HoaDonDB+CoreDataClass.swift */; };
+		AD9AAF891E2D14ED00EFCCCB /* HoaDonDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9AAF6F1E2D14ED00EFCCCB /* HoaDonDB+CoreDataProperties.swift */; };
+		AD9AAF8A1E2D14ED00EFCCCB /* PhongDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9AAF701E2D14ED00EFCCCB /* PhongDB+CoreDataClass.swift */; };
+		AD9AAF8B1E2D14ED00EFCCCB /* PhongDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9AAF711E2D14ED00EFCCCB /* PhongDB+CoreDataProperties.swift */; };
+		AD9AAF8C1E2D14ED00EFCCCB /* HoSoNhanKhauDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9AAF721E2D14ED00EFCCCB /* HoSoNhanKhauDB+CoreDataClass.swift */; };
+		AD9AAF8D1E2D14ED00EFCCCB /* HoSoNhanKhauDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9AAF731E2D14ED00EFCCCB /* HoSoNhanKhauDB+CoreDataProperties.swift */; };
+		AD9AAF8E1E2D14ED00EFCCCB /* NuocDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9AAF741E2D14ED00EFCCCB /* NuocDB+CoreDataClass.swift */; };
+		AD9AAF8F1E2D14ED00EFCCCB /* NuocDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9AAF751E2D14ED00EFCCCB /* NuocDB+CoreDataProperties.swift */; };
+		AD9AAF901E2D14ED00EFCCCB /* DienDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9AAF761E2D14ED00EFCCCB /* DienDB+CoreDataClass.swift */; };
+		AD9AAF911E2D14ED00EFCCCB /* DienDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9AAF771E2D14ED00EFCCCB /* DienDB+CoreDataProperties.swift */; };
+		AD9AAF921E2D14ED00EFCCCB /* HinhAnhPhongDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9AAF781E2D14ED00EFCCCB /* HinhAnhPhongDB+CoreDataClass.swift */; };
+		AD9AAF931E2D14ED00EFCCCB /* HinhAnhPhongDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9AAF791E2D14ED00EFCCCB /* HinhAnhPhongDB+CoreDataProperties.swift */; };
+		AD9AAF941E2D14ED00EFCCCB /* NhaTroDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9AAF7A1E2D14ED00EFCCCB /* NhaTroDB+CoreDataClass.swift */; };
+		AD9AAF951E2D14ED00EFCCCB /* NhaTroDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9AAF7B1E2D14ED00EFCCCB /* NhaTroDB+CoreDataProperties.swift */; };
+		AD9AAF961E2D14ED00EFCCCB /* DichVuSinhHoatDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9AAF7C1E2D14ED00EFCCCB /* DichVuSinhHoatDB+CoreDataClass.swift */; };
+		AD9AAF971E2D14ED00EFCCCB /* DichVuSinhHoatDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9AAF7D1E2D14ED00EFCCCB /* DichVuSinhHoatDB+CoreDataProperties.swift */; };
+		AD9AAF981E2D14ED00EFCCCB /* GioiTinhDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9AAF7E1E2D14ED00EFCCCB /* GioiTinhDB+CoreDataClass.swift */; };
+		AD9AAF991E2D14ED00EFCCCB /* GioiTinhDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9AAF7F1E2D14ED00EFCCCB /* GioiTinhDB+CoreDataProperties.swift */; };
+		AD9AAF9A1E2D14ED00EFCCCB /* ThamSoDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9AAF801E2D14ED00EFCCCB /* ThamSoDB+CoreDataClass.swift */; };
+		AD9AAF9B1E2D14ED00EFCCCB /* ThamSoDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9AAF811E2D14ED00EFCCCB /* ThamSoDB+CoreDataProperties.swift */; };
+		AD9AAF9C1E2D14ED00EFCCCB /* TinhTrangDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9AAF821E2D14ED00EFCCCB /* TinhTrangDB+CoreDataClass.swift */; };
+		AD9AAF9D1E2D14ED00EFCCCB /* TinhTrangDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9AAF831E2D14ED00EFCCCB /* TinhTrangDB+CoreDataProperties.swift */; };
+		AD9AAF9F1E2D1A7000EFCCCB /* GaiaSDKUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD9AAF9E1E2D1A7000EFCCCB /* GaiaSDKUIKit.framework */; };
+		AD9AAFA01E2D1A7000EFCCCB /* GaiaSDKUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AD9AAF9E1E2D1A7000EFCCCB /* GaiaSDKUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ADAC7C2A1E15476C00641F9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADAC7C281E15476C00641F9A /* Main.storyboard */; };
-		ADC55B6F1E2B8FE400DEF952 /* GaiaSDKUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD03FB8C1E2B87E50052B635 /* GaiaSDKUIKit.framework */; };
-		ADC55B701E2B8FE400DEF952 /* GaiaSDKUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AD03FB8C1E2B87E50052B635 /* GaiaSDKUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B5628E3C77A3445F64442040 /* Pods_Hostel_Management.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2349055DC21858BAF47657E /* Pods_Hostel_Management.framework */; };
 /* End PBXBuildFile section */
 
@@ -94,8 +104,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				AD03FB8E1E2B87E50052B635 /* GaiaSDKUIKit.framework in Embed Frameworks */,
-				ADC55B701E2B8FE400DEF952 /* GaiaSDKUIKit.framework in Embed Frameworks */,
+				AD9AAFA01E2D1A7000EFCCCB /* GaiaSDKUIKit.framework in Embed Frameworks */,
 				AD1261421E2B840400A4D285 /* (null) in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -110,33 +119,10 @@
 		683CF313C16DEADBC4124AEC /* Pods_Hostel_ManagementUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hostel_ManagementUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A15F3FEBB4DAEA471E4EF724 /* Pods-Hostel ManagementTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hostel ManagementTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hostel ManagementTests/Pods-Hostel ManagementTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A2349055DC21858BAF47657E /* Pods_Hostel_Management.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hostel_Management.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD03FB8C1E2B87E50052B635 /* GaiaSDKUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GaiaSDKUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD18FACC1E290FA9007175E8 /* HoaDonDB+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HoaDonDB+CoreDataClass.swift"; sourceTree = "<group>"; };
-		AD18FACD1E290FA9007175E8 /* HoaDonDB+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HoaDonDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		AD18FACE1E290FA9007175E8 /* DichVuSinhHoatDB+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DichVuSinhHoatDB+CoreDataClass.swift"; sourceTree = "<group>"; };
-		AD18FACF1E290FA9007175E8 /* DichVuSinhHoatDB+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DichVuSinhHoatDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		AD18FAD01E290FA9007175E8 /* HoSoNhanKhauDB+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HoSoNhanKhauDB+CoreDataClass.swift"; sourceTree = "<group>"; };
-		AD18FAD11E290FA9007175E8 /* HoSoNhanKhauDB+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HoSoNhanKhauDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		AD18FAD21E290FA9007175E8 /* NhaTroDB+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NhaTroDB+CoreDataClass.swift"; sourceTree = "<group>"; };
-		AD18FAD31E290FA9007175E8 /* NhaTroDB+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NhaTroDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		AD18FAD41E290FA9007175E8 /* TinhTrangDB+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TinhTrangDB+CoreDataClass.swift"; sourceTree = "<group>"; };
-		AD18FAD51E290FA9007175E8 /* TinhTrangDB+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TinhTrangDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		AD18FAD61E290FA9007175E8 /* HinhAnhPhongDB+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HinhAnhPhongDB+CoreDataClass.swift"; sourceTree = "<group>"; };
-		AD18FAD71E290FA9007175E8 /* HinhAnhPhongDB+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HinhAnhPhongDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		AD18FAD81E290FA9007175E8 /* ChuNhaDB+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChuNhaDB+CoreDataClass.swift"; sourceTree = "<group>"; };
-		AD18FAD91E290FA9007175E8 /* ChuNhaDB+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChuNhaDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		AD18FADA1E290FA9007175E8 /* LoaiDichVuDB+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoaiDichVuDB+CoreDataClass.swift"; sourceTree = "<group>"; };
-		AD18FADB1E290FA9007175E8 /* LoaiDichVuDB+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoaiDichVuDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		AD18FADC1E290FA9007175E8 /* NguoiThueTroDB+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NguoiThueTroDB+CoreDataClass.swift"; sourceTree = "<group>"; };
-		AD18FADD1E290FA9007175E8 /* NguoiThueTroDB+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NguoiThueTroDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		AD18FADE1E290FA9007175E8 /* PhongDB+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PhongDB+CoreDataClass.swift"; sourceTree = "<group>"; };
-		AD18FADF1E290FA9007175E8 /* PhongDB+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PhongDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		AD18FAE01E290FA9007175E8 /* GioiTinhDB+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GioiTinhDB+CoreDataClass.swift"; sourceTree = "<group>"; };
-		AD18FAE11E290FA9007175E8 /* GioiTinhDB+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GioiTinhDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		AD18FAF81E2AFB06007175E8 /* PhongTro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhongTro.swift; sourceTree = "<group>"; };
+		AD18FAF81E2AFB06007175E8 /* Phong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Phong.swift; sourceTree = "<group>"; };
 		AD18FAFA1E2B0E1C007175E8 /* RoomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomTableViewCell.swift; sourceTree = "<group>"; };
 		AD18FAFC1E2B0E6A007175E8 /* RoomTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomTableViewController.swift; sourceTree = "<group>"; };
-		AD18FAFE1E2B2243007175E8 /* NguoiThueTro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NguoiThueTro.swift; sourceTree = "<group>"; };
+		AD18FAFE1E2B2243007175E8 /* TaiKhoanPhong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaiKhoanPhong.swift; sourceTree = "<group>"; };
 		AD18FB001E2B2550007175E8 /* HoSoNhanKhau.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoSoNhanKhau.swift; sourceTree = "<group>"; };
 		AD18FB021E2B2965007175E8 /* DichVuSinhHoat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DichVuSinhHoat.swift; sourceTree = "<group>"; };
 		AD18FB041E2B2CAF007175E8 /* HoaDon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoaDon.swift; sourceTree = "<group>"; };
@@ -150,6 +136,14 @@
 		AD197D7F1E20CE02002D334A /* EditHostelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditHostelViewController.swift; sourceTree = "<group>"; };
 		AD197D811E271272002D334A /* NhaTro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NhaTro.swift; sourceTree = "<group>"; };
 		AD1B60591E2B696B00DB6AD9 /* EditRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditRoomViewController.swift; sourceTree = "<group>"; };
+		AD1F763C1E2D901800434D46 /* ThuePhong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThuePhong.swift; sourceTree = "<group>"; };
+		AD1F763E1E2DA09800434D46 /* DichVuTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DichVuTarget.swift; sourceTree = "<group>"; };
+		AD1F76401E2DA33200434D46 /* DienAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DienAdapter.swift; sourceTree = "<group>"; };
+		AD1F76421E2DA35F00434D46 /* Dien.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dien.swift; sourceTree = "<group>"; };
+		AD1F76441E2DA74C00434D46 /* Nuoc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nuoc.swift; sourceTree = "<group>"; };
+		AD1F76461E2DA7E700434D46 /* Internet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Internet.swift; sourceTree = "<group>"; };
+		AD1F76481E2DAA2300434D46 /* NuocAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NuocAdapter.swift; sourceTree = "<group>"; };
+		AD1F764A1E2DAA5100434D46 /* InternetAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternetAdapter.swift; sourceTree = "<group>"; };
 		AD4970EC1E17E84500D27447 /* RentRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RentRoomViewController.swift; sourceTree = "<group>"; };
 		AD4970EE1E17EFDD00D27447 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AD4970F11E17F18B00D27447 /* Definition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Definition.swift; sourceTree = "<group>"; };
@@ -168,6 +162,33 @@
 		AD91E6BB1E10229400629F35 /* Hostel ManagementUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hostel ManagementUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD91E6BF1E10229400629F35 /* Hostel_ManagementUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hostel_ManagementUITests.swift; sourceTree = "<group>"; };
 		AD91E6C11E10229400629F35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD9AAF6A1E2D14ED00EFCCCB /* ChuNhaDB+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChuNhaDB+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AD9AAF6B1E2D14ED00EFCCCB /* ChuNhaDB+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChuNhaDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AD9AAF6C1E2D14ED00EFCCCB /* NguoiThueTroDB+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NguoiThueTroDB+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AD9AAF6D1E2D14ED00EFCCCB /* NguoiThueTroDB+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NguoiThueTroDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AD9AAF6E1E2D14ED00EFCCCB /* HoaDonDB+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HoaDonDB+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AD9AAF6F1E2D14ED00EFCCCB /* HoaDonDB+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HoaDonDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AD9AAF701E2D14ED00EFCCCB /* PhongDB+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PhongDB+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AD9AAF711E2D14ED00EFCCCB /* PhongDB+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PhongDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AD9AAF721E2D14ED00EFCCCB /* HoSoNhanKhauDB+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HoSoNhanKhauDB+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AD9AAF731E2D14ED00EFCCCB /* HoSoNhanKhauDB+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HoSoNhanKhauDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AD9AAF741E2D14ED00EFCCCB /* NuocDB+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NuocDB+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AD9AAF751E2D14ED00EFCCCB /* NuocDB+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NuocDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AD9AAF761E2D14ED00EFCCCB /* DienDB+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DienDB+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AD9AAF771E2D14ED00EFCCCB /* DienDB+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DienDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AD9AAF781E2D14ED00EFCCCB /* HinhAnhPhongDB+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HinhAnhPhongDB+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AD9AAF791E2D14ED00EFCCCB /* HinhAnhPhongDB+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HinhAnhPhongDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AD9AAF7A1E2D14ED00EFCCCB /* NhaTroDB+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NhaTroDB+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AD9AAF7B1E2D14ED00EFCCCB /* NhaTroDB+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NhaTroDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AD9AAF7C1E2D14ED00EFCCCB /* DichVuSinhHoatDB+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DichVuSinhHoatDB+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AD9AAF7D1E2D14ED00EFCCCB /* DichVuSinhHoatDB+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DichVuSinhHoatDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AD9AAF7E1E2D14ED00EFCCCB /* GioiTinhDB+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GioiTinhDB+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AD9AAF7F1E2D14ED00EFCCCB /* GioiTinhDB+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GioiTinhDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AD9AAF801E2D14ED00EFCCCB /* ThamSoDB+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ThamSoDB+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AD9AAF811E2D14ED00EFCCCB /* ThamSoDB+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ThamSoDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AD9AAF821E2D14ED00EFCCCB /* TinhTrangDB+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TinhTrangDB+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AD9AAF831E2D14ED00EFCCCB /* TinhTrangDB+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TinhTrangDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AD9AAF9E1E2D1A7000EFCCCB /* GaiaSDKUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GaiaSDKUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADAC7C291E15476C00641F9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ADD9CB4B1E140E340051F63B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DE1ED603C5E16F8546FA9546 /* Pods-Hostel Management.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hostel Management.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hostel Management/Pods-Hostel Management.debug.xcconfig"; sourceTree = "<group>"; };
@@ -180,8 +201,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD03FB8D1E2B87E50052B635 /* GaiaSDKUIKit.framework in Frameworks */,
-				ADC55B6F1E2B8FE400DEF952 /* GaiaSDKUIKit.framework in Frameworks */,
+				AD9AAF9F1E2D1A7000EFCCCB /* GaiaSDKUIKit.framework in Frameworks */,
 				B5628E3C77A3445F64442040 /* Pods_Hostel_Management.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,11 +243,19 @@
 			children = (
 				AD197CED1E1F45A4002D334A /* ChuNha.swift */,
 				AD197D811E271272002D334A /* NhaTro.swift */,
-				AD18FAF81E2AFB06007175E8 /* PhongTro.swift */,
-				AD18FAFE1E2B2243007175E8 /* NguoiThueTro.swift */,
+				AD18FAF81E2AFB06007175E8 /* Phong.swift */,
+				AD18FAFE1E2B2243007175E8 /* TaiKhoanPhong.swift */,
 				AD18FB001E2B2550007175E8 /* HoSoNhanKhau.swift */,
-				AD18FB021E2B2965007175E8 /* DichVuSinhHoat.swift */,
 				AD18FB041E2B2CAF007175E8 /* HoaDon.swift */,
+				AD1F763C1E2D901800434D46 /* ThuePhong.swift */,
+				AD18FB021E2B2965007175E8 /* DichVuSinhHoat.swift */,
+				AD1F763E1E2DA09800434D46 /* DichVuTarget.swift */,
+				AD1F76401E2DA33200434D46 /* DienAdapter.swift */,
+				AD1F76481E2DAA2300434D46 /* NuocAdapter.swift */,
+				AD1F764A1E2DAA5100434D46 /* InternetAdapter.swift */,
+				AD1F76421E2DA35F00434D46 /* Dien.swift */,
+				AD1F76441E2DA74C00434D46 /* Nuoc.swift */,
+				AD1F76461E2DA7E700434D46 /* Internet.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -235,28 +263,32 @@
 		AD197CBC1E1F2FDE002D334A /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				AD18FACC1E290FA9007175E8 /* HoaDonDB+CoreDataClass.swift */,
-				AD18FACD1E290FA9007175E8 /* HoaDonDB+CoreDataProperties.swift */,
-				AD18FACE1E290FA9007175E8 /* DichVuSinhHoatDB+CoreDataClass.swift */,
-				AD18FACF1E290FA9007175E8 /* DichVuSinhHoatDB+CoreDataProperties.swift */,
-				AD18FAD01E290FA9007175E8 /* HoSoNhanKhauDB+CoreDataClass.swift */,
-				AD18FAD11E290FA9007175E8 /* HoSoNhanKhauDB+CoreDataProperties.swift */,
-				AD18FAD21E290FA9007175E8 /* NhaTroDB+CoreDataClass.swift */,
-				AD18FAD31E290FA9007175E8 /* NhaTroDB+CoreDataProperties.swift */,
-				AD18FAD41E290FA9007175E8 /* TinhTrangDB+CoreDataClass.swift */,
-				AD18FAD51E290FA9007175E8 /* TinhTrangDB+CoreDataProperties.swift */,
-				AD18FAD61E290FA9007175E8 /* HinhAnhPhongDB+CoreDataClass.swift */,
-				AD18FAD71E290FA9007175E8 /* HinhAnhPhongDB+CoreDataProperties.swift */,
-				AD18FAD81E290FA9007175E8 /* ChuNhaDB+CoreDataClass.swift */,
-				AD18FAD91E290FA9007175E8 /* ChuNhaDB+CoreDataProperties.swift */,
-				AD18FADA1E290FA9007175E8 /* LoaiDichVuDB+CoreDataClass.swift */,
-				AD18FADB1E290FA9007175E8 /* LoaiDichVuDB+CoreDataProperties.swift */,
-				AD18FADC1E290FA9007175E8 /* NguoiThueTroDB+CoreDataClass.swift */,
-				AD18FADD1E290FA9007175E8 /* NguoiThueTroDB+CoreDataProperties.swift */,
-				AD18FADE1E290FA9007175E8 /* PhongDB+CoreDataClass.swift */,
-				AD18FADF1E290FA9007175E8 /* PhongDB+CoreDataProperties.swift */,
-				AD18FAE01E290FA9007175E8 /* GioiTinhDB+CoreDataClass.swift */,
-				AD18FAE11E290FA9007175E8 /* GioiTinhDB+CoreDataProperties.swift */,
+				AD9AAF6A1E2D14ED00EFCCCB /* ChuNhaDB+CoreDataClass.swift */,
+				AD9AAF6B1E2D14ED00EFCCCB /* ChuNhaDB+CoreDataProperties.swift */,
+				AD9AAF6C1E2D14ED00EFCCCB /* NguoiThueTroDB+CoreDataClass.swift */,
+				AD9AAF6D1E2D14ED00EFCCCB /* NguoiThueTroDB+CoreDataProperties.swift */,
+				AD9AAF6E1E2D14ED00EFCCCB /* HoaDonDB+CoreDataClass.swift */,
+				AD9AAF6F1E2D14ED00EFCCCB /* HoaDonDB+CoreDataProperties.swift */,
+				AD9AAF701E2D14ED00EFCCCB /* PhongDB+CoreDataClass.swift */,
+				AD9AAF711E2D14ED00EFCCCB /* PhongDB+CoreDataProperties.swift */,
+				AD9AAF721E2D14ED00EFCCCB /* HoSoNhanKhauDB+CoreDataClass.swift */,
+				AD9AAF731E2D14ED00EFCCCB /* HoSoNhanKhauDB+CoreDataProperties.swift */,
+				AD9AAF741E2D14ED00EFCCCB /* NuocDB+CoreDataClass.swift */,
+				AD9AAF751E2D14ED00EFCCCB /* NuocDB+CoreDataProperties.swift */,
+				AD9AAF761E2D14ED00EFCCCB /* DienDB+CoreDataClass.swift */,
+				AD9AAF771E2D14ED00EFCCCB /* DienDB+CoreDataProperties.swift */,
+				AD9AAF781E2D14ED00EFCCCB /* HinhAnhPhongDB+CoreDataClass.swift */,
+				AD9AAF791E2D14ED00EFCCCB /* HinhAnhPhongDB+CoreDataProperties.swift */,
+				AD9AAF7A1E2D14ED00EFCCCB /* NhaTroDB+CoreDataClass.swift */,
+				AD9AAF7B1E2D14ED00EFCCCB /* NhaTroDB+CoreDataProperties.swift */,
+				AD9AAF7C1E2D14ED00EFCCCB /* DichVuSinhHoatDB+CoreDataClass.swift */,
+				AD9AAF7D1E2D14ED00EFCCCB /* DichVuSinhHoatDB+CoreDataProperties.swift */,
+				AD9AAF7E1E2D14ED00EFCCCB /* GioiTinhDB+CoreDataClass.swift */,
+				AD9AAF7F1E2D14ED00EFCCCB /* GioiTinhDB+CoreDataProperties.swift */,
+				AD9AAF801E2D14ED00EFCCCB /* ThamSoDB+CoreDataClass.swift */,
+				AD9AAF811E2D14ED00EFCCCB /* ThamSoDB+CoreDataProperties.swift */,
+				AD9AAF821E2D14ED00EFCCCB /* TinhTrangDB+CoreDataClass.swift */,
+				AD9AAF831E2D14ED00EFCCCB /* TinhTrangDB+CoreDataProperties.swift */,
 			);
 			name = Database;
 			sourceTree = "<group>";
@@ -294,7 +326,7 @@
 		AD91E6901E10229400629F35 = {
 			isa = PBXGroup;
 			children = (
-				AD03FB8C1E2B87E50052B635 /* GaiaSDKUIKit.framework */,
+				AD9AAF9E1E2D1A7000EFCCCB /* GaiaSDKUIKit.framework */,
 				AD91E69B1E10229400629F35 /* Hostel Management */,
 				AD91E6B31E10229400629F35 /* Hostel ManagementTests */,
 				AD91E6BE1E10229400629F35 /* Hostel ManagementUITests */,
@@ -646,52 +678,64 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD1261431E2B844F00A4D285 /* (null) in Sources */,
+				AD9AAF901E2D14ED00EFCCCB /* DienDB+CoreDataClass.swift in Sources */,
+				AD9AAF8A1E2D14ED00EFCCCB /* PhongDB+CoreDataClass.swift in Sources */,
+				AD9AAF8C1E2D14ED00EFCCCB /* HoSoNhanKhauDB+CoreDataClass.swift in Sources */,
+				AD9AAF971E2D14ED00EFCCCB /* DichVuSinhHoatDB+CoreDataProperties.swift in Sources */,
+				AD1F76431E2DA35F00434D46 /* Dien.swift in Sources */,
 				AD18FB011E2B2550007175E8 /* HoSoNhanKhau.swift in Sources */,
+				AD9AAF891E2D14ED00EFCCCB /* HoaDonDB+CoreDataProperties.swift in Sources */,
 				AD197CEE1E1F45A4002D334A /* ChuNha.swift in Sources */,
 				AD18FB051E2B2CAF007175E8 /* HoaDon.swift in Sources */,
+				AD1F763D1E2D901800434D46 /* ThuePhong.swift in Sources */,
+				AD9AAF851E2D14ED00EFCCCB /* ChuNhaDB+CoreDataProperties.swift in Sources */,
 				AD4970ED1E17E84500D27447 /* RentRoomViewController.swift in Sources */,
 				AD879EE51E154E5500D5E154 /* CreateAccountViewController.swift in Sources */,
+				AD9AAF941E2D14ED00EFCCCB /* NhaTroDB+CoreDataClass.swift in Sources */,
+				AD1F76451E2DA74C00434D46 /* Nuoc.swift in Sources */,
 				AD4970F21E17F18B00D27447 /* Definition.swift in Sources */,
+				AD9AAF871E2D14ED00EFCCCB /* NguoiThueTroDB+CoreDataProperties.swift in Sources */,
+				AD1F764B1E2DAA5100434D46 /* InternetAdapter.swift in Sources */,
 				AD18FAFB1E2B0E1C007175E8 /* RoomTableViewCell.swift in Sources */,
+				AD9AAF951E2D14ED00EFCCCB /* NhaTroDB+CoreDataProperties.swift in Sources */,
 				AD91E69F1E10229400629F35 /* LoginViewController.swift in Sources */,
-				AD18FAE91E290FA9007175E8 /* NhaTroDB+CoreDataProperties.swift in Sources */,
+				AD9AAF9A1E2D14ED00EFCCCB /* ThamSoDB+CoreDataClass.swift in Sources */,
+				AD9AAF8D1E2D14ED00EFCCCB /* HoSoNhanKhauDB+CoreDataProperties.swift in Sources */,
 				AD4970EF1E17EFDD00D27447 /* MainViewController.swift in Sources */,
-				AD18FAE41E290FA9007175E8 /* DichVuSinhHoatDB+CoreDataClass.swift in Sources */,
 				AD197C1F1E194E48002D334A /* EditAccountViewController.swift in Sources */,
-				AD18FAEC1E290FA9007175E8 /* HinhAnhPhongDB+CoreDataClass.swift in Sources */,
-				AD18FAF21E290FAA007175E8 /* NguoiThueTroDB+CoreDataClass.swift in Sources */,
-				AD18FAED1E290FA9007175E8 /* HinhAnhPhongDB+CoreDataProperties.swift in Sources */,
 				AD4AED5C1E271EBA00DD02E8 /* HostelTableViewController.swift in Sources */,
-				AD18FAEE1E290FA9007175E8 /* ChuNhaDB+CoreDataClass.swift in Sources */,
+				AD9AAF981E2D14ED00EFCCCB /* GioiTinhDB+CoreDataClass.swift in Sources */,
+				AD9AAF961E2D14ED00EFCCCB /* DichVuSinhHoatDB+CoreDataClass.swift in Sources */,
+				AD9AAF9B1E2D14ED00EFCCCB /* ThamSoDB+CoreDataProperties.swift in Sources */,
 				AD197D821E271272002D334A /* NhaTro.swift in Sources */,
-				AD18FAE31E290FA9007175E8 /* HoaDonDB+CoreDataProperties.swift in Sources */,
-				AD18FAF61E290FAA007175E8 /* GioiTinhDB+CoreDataClass.swift in Sources */,
+				AD9AAF9C1E2D14ED00EFCCCB /* TinhTrangDB+CoreDataClass.swift in Sources */,
 				AD91E69D1E10229400629F35 /* AppDelegate.swift in Sources */,
+				AD9AAF991E2D14ED00EFCCCB /* GioiTinhDB+CoreDataProperties.swift in Sources */,
+				AD9AAF931E2D14ED00EFCCCB /* HinhAnhPhongDB+CoreDataProperties.swift in Sources */,
 				AD18FB031E2B2965007175E8 /* DichVuSinhHoat.swift in Sources */,
-				AD18FAE61E290FA9007175E8 /* HoSoNhanKhauDB+CoreDataClass.swift in Sources */,
-				AD18FAF31E290FAA007175E8 /* NguoiThueTroDB+CoreDataProperties.swift in Sources */,
+				AD9AAF861E2D14ED00EFCCCB /* NguoiThueTroDB+CoreDataClass.swift in Sources */,
+				AD9AAF8F1E2D14ED00EFCCCB /* NuocDB+CoreDataProperties.swift in Sources */,
 				AD1B605A1E2B696B00DB6AD9 /* EditRoomViewController.swift in Sources */,
-				AD18FAF71E290FAA007175E8 /* GioiTinhDB+CoreDataProperties.swift in Sources */,
-				AD18FAE81E290FA9007175E8 /* NhaTroDB+CoreDataClass.swift in Sources */,
 				AD197C1D1E18EF51002D334A /* AccountViewController.swift in Sources */,
-				AD18FAE51E290FA9007175E8 /* DichVuSinhHoatDB+CoreDataProperties.swift in Sources */,
+				AD9AAF881E2D14ED00EFCCCB /* HoaDonDB+CoreDataClass.swift in Sources */,
 				AD197C171E181379002D334A /* FirstSceneViewController.swift in Sources */,
+				AD9AAF841E2D14ED00EFCCCB /* ChuNhaDB+CoreDataClass.swift in Sources */,
 				AD197D801E20CE02002D334A /* EditHostelViewController.swift in Sources */,
-				AD18FAF11E290FAA007175E8 /* LoaiDichVuDB+CoreDataProperties.swift in Sources */,
-				AD18FAEF1E290FA9007175E8 /* ChuNhaDB+CoreDataProperties.swift in Sources */,
-				AD18FAEA1E290FA9007175E8 /* TinhTrangDB+CoreDataClass.swift in Sources */,
-				AD18FAE71E290FA9007175E8 /* HoSoNhanKhauDB+CoreDataProperties.swift in Sources */,
-				AD18FAFF1E2B2243007175E8 /* NguoiThueTro.swift in Sources */,
-				AD18FAF51E290FAA007175E8 /* PhongDB+CoreDataProperties.swift in Sources */,
-				AD18FAF41E290FAA007175E8 /* PhongDB+CoreDataClass.swift in Sources */,
+				AD18FAFF1E2B2243007175E8 /* TaiKhoanPhong.swift in Sources */,
+				AD1F76411E2DA33200434D46 /* DienAdapter.swift in Sources */,
 				AD197C1B1E18C861002D334A /* SupportingMethods.swift in Sources */,
-				AD18FAF01E290FAA007175E8 /* LoaiDichVuDB+CoreDataClass.swift in Sources */,
-				AD18FAF91E2AFB06007175E8 /* PhongTro.swift in Sources */,
+				AD9AAF8B1E2D14ED00EFCCCB /* PhongDB+CoreDataProperties.swift in Sources */,
+				AD18FAF91E2AFB06007175E8 /* Phong.swift in Sources */,
+				AD1F76471E2DA7E700434D46 /* Internet.swift in Sources */,
 				AD18FAFD1E2B0E6A007175E8 /* RoomTableViewController.swift in Sources */,
-				AD18FAE21E290FA9007175E8 /* HoaDonDB+CoreDataClass.swift in Sources */,
+				AD9AAF911E2D14ED00EFCCCB /* DienDB+CoreDataProperties.swift in Sources */,
+				AD9AAF8E1E2D14ED00EFCCCB /* NuocDB+CoreDataClass.swift in Sources */,
+				AD9AAF9D1E2D14ED00EFCCCB /* TinhTrangDB+CoreDataProperties.swift in Sources */,
+				AD1F763F1E2DA09800434D46 /* DichVuTarget.swift in Sources */,
+				AD9AAF921E2D14ED00EFCCCB /* HinhAnhPhongDB+CoreDataClass.swift in Sources */,
 				AD197C211E1958BD002D334A /* EditPasswordViewController.swift in Sources */,
-				AD18FAEB1E290FA9007175E8 /* TinhTrangDB+CoreDataProperties.swift in Sources */,
 				AD197C231E19F1BF002D334A /* HostelTableViewCell.swift in Sources */,
+				AD1F76491E2DAA2300434D46 /* NuocAdapter.swift in Sources */,
 				AD91E6A51E10229400629F35 /* Hostel_Management.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -842,7 +886,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DE1ED603C5E16F8546FA9546 /* Pods-Hostel Management.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: minhchuong.itus@icloud.com (UZNR2TUUY2)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -870,7 +913,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E6C3FE590C05B5080FC74062 /* Pods-Hostel Management.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: minhchuong.itus@icloud.com (UZNR2TUUY2)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

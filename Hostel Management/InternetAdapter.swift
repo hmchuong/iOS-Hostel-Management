@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+class InternetAdapter: Internet, DichVuTarget{
+    
+    // MARK: - Methods
+    func changePrice(_ gia: [(Int, Int)]) {
+        super.change(gia[0].1)
+    }
+    func calculateMoney(chisocu: Int, chisomoi: Int) -> Int {
+        return super.calc()
+    }
+}

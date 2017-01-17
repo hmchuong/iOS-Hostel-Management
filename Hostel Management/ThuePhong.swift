@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+class ThuePhong{
+    // MARK: - Properties
+    var dsThanhVien: [HoSoNhanKhau]?
+    var hoaDon: [HoaDon]?
+    var taiKhoanPhong: TaiKhoanPhong?
+    
+    // MARK: - Methods
+    public init(id: String, token: String){
+        dsThanhVien = []
+        hoaDon = []
+        taiKhoanPhong = TaiKhoanPhong(id: id, matoken: token)
+    }
+}

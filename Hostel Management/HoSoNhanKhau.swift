@@ -10,23 +10,23 @@ import Foundation
 
 class HoSoNhanKhau{
     var cmnd: String?
-    var diachithuongtru: String?
-    var hoten: String?
-    var ngaysinh: NSDate?
-    var nghenghiep: String?
-    var id: Int16
-    var quequan: String?
-    var sodienthoai: String?
-    var gioitinh: GioiTinh?
+    var diaChiThuongTru: String?
+    var hoTen: String?
+    var ngaySinh: NSDate?
+    var ngheNghiep: String?
+    var maHoSo: String?
+    var queQuan: String?
+    var soDienThoai: String?
+    var gioiTinh: GioiTinh?
     
-    public init(id: Int16, hoten: String?, cmnd: String?, diachithuongtru: String?, ngaysinh: NSDate?, quequan: String?,sodienthoai: String?, gioitinh: GioiTinh?){
-        self.id = id
-        self.hoten = hoten ?? ""
+    public init(mahoso: String, hoten: String?, cmnd: String?, diachithuongtru: String?, ngaysinh: NSDate?, quequan: String?,sodienthoai: String?, gioitinh: GioiTinh?){
+        self.maHoSo = mahoso
+        self.hoTen = hoten ?? ""
         self.cmnd = cmnd ?? ""
-        self.diachithuongtru = diachithuongtru ?? ""
-        self.ngaysinh = ngaysinh ?? NSDate(dateString: "2000-01-01")
-        self.quequan = quequan ?? ""
-        self.sodienthoai = sodienthoai ?? ""
-        self.gioitinh = gioitinh ?? GioiTinh.nam
+        self.diaChiThuongTru = diachithuongtru ?? ""
+        self.ngaySinh = ngaysinh ?? NSDate(dateString: "2000-01-01")
+        self.queQuan = quequan ?? ""
+        self.soDienThoai = sodienthoai ?? ""
+        self.gioiTinh = gioitinh ?? GioiTinh.nam
     }
 }

@@ -352,8 +352,8 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="leftBorder" value="YES"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="rightBorder" value="YES"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="validation" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="selfCheck" value="NO"/>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="typingCheck" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="selfCheck" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="typingCheck" value="YES"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="insideTextfield" value="YES"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                 <real key="value" value="1"/>
@@ -392,6 +392,8 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="msgRequired" value="Không được để trống"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="colorInvalid" value="#ff0000"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="msgAlign" value="bottom"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="regexPattern" value="^\w{7,18}$"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="msgRegex" value="Tên đăng nhập không phù hợp"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="delegate" destination="iGc-yz-IXu" id="D2Q-yH-T0M"/>

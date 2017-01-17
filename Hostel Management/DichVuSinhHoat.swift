@@ -9,17 +9,12 @@
 import Foundation
 
 class DichVuSinhHoat{
-    var chisocu: Int64
-    var chisomoi: Int64
-    var thang: Int16
-    var tongtien: NSDecimalNumber
-    var loaidichvu: LoaiDichVu
+    internal var maDichVu: Int32
+    internal var thang: Int16
+    internal var dichVuTarget: DichVuTarget? = nil
     
-    public init(loaidichvu: LoaiDichVu, chisocu: Int64, chisomoi: Int64, thang: Int16, tongtien: NSDecimalNumber){
-        self.loaidichvu = loaidichvu
-        self.chisocu = chisocu
-        self.chisomoi = chisomoi
-        self.thang = thang
-        self.tongtien = tongtien
+    required init(madichvu: Int32, thang: Int16){
+        self.maDichVu = madichvu
+        self.thang = thang 
     }
 }

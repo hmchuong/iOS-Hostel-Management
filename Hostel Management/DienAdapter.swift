@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+class DienAdapter: Dien, DichVuTarget{
+    
+    // MARK: - Methods 
+    func changePrice(_ gia: [(Int, Int)]) {
+        super.change(gia)
+    }
+    func calculateMoney(chisocu: Int, chisomoi: Int) -> Int {
+        return super.calc(chisocu: chisocu, chisomoi: chisomoi)
+    }
+}
+

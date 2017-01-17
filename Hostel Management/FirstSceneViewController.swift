@@ -29,9 +29,6 @@ class FirstSceneViewController: UIViewController {
             
             // Save default information to TinhTrang database
             saveToTinhTrangDB(context: context)
-            
-            // Save default information to LoaiDichVu database
-            saveToLoaiDichVuDB(context: context)
         } else {
             print("ios must be 10.0")
         }
@@ -80,10 +77,10 @@ class FirstSceneViewController: UIViewController {
         
         let fetchRequest: NSFetchRequest<GioiTinhDB> = GioiTinhDB.fetchRequest()
         fetchRequest.returnsObjectsAsFaults = false
-        let values = [GioiTinh.nam.rawValue, GioiTinh.nu.rawValue]
+        let values = [GioiTinh.nam, GioiTinh.nu]
         // Save each value to database
         for value in values{
-            let predicate = NSPredicate(format: "%K == %@", "mota", value)
+            let predicate = NSPredicate(format: "%K == %@ AND %K == %i", "mota", value.rawValue, "magioitinh", value.hashValue)
             fetchRequest.predicate = predicate
             
             do{
@@ -92,9 +89,10 @@ class FirstSceneViewController: UIViewController {
                     let entity = NSEntityDescription.entity(forEntityName: "GioiTinh", in: context)
                     let record = GioiTinhDB(entity: entity!, insertInto: context)
                     
-                    record.mota = value
+                    record.mota = value.rawValue
+                    record.magioitinh = Int16(value.hashValue)
                     
-                    _ = saveContext(context, with: value)
+                    _ = saveContext(context, with: value.rawValue)
                 }
             } catch {
                 let fetchError = error as NSError
@@ -110,10 +108,10 @@ class FirstSceneViewController: UIViewController {
         
         let fetchRequest: NSFetchRequest<TinhTrangDB> = TinhTrangDB.fetchRequest()
         fetchRequest.returnsObjectsAsFaults = false
-        let values = [TinhTrang.trong.rawValue, TinhTrang.daThue.rawValue, TinhTrang.suaChua.rawValue]
+        let values = [TinhTrang.trong, TinhTrang.daThue, TinhTrang.suaChua]
         // Save each value to database
         for value in values{
-            let predicate = NSPredicate(format: "%K == %@", "mota", value)
+            let predicate = NSPredicate(format: "%K == %@ AND %K == %i", "mota", value.rawValue, "matinhtrang", value.hashValue)
             fetchRequest.predicate = predicate
             
             do{
@@ -122,9 +120,10 @@ class FirstSceneViewController: UIViewController {
                     let entity = NSEntityDescription.entity(forEntityName: "TinhTrang", in: context)
                     let record = TinhTrangDB(entity: entity!, insertInto: context)
                     
-                    record.mota = value
+                    record.mota = value.rawValue
+                    record.matinhtrang = Int16(value.hashValue)
                     
-                    _ = saveContext(context, with: value)
+                    _ = saveContext(context, with: value.rawValue)
                 }
             } catch {
                 let fetchError = error as NSError
@@ -132,35 +131,4 @@ class FirstSceneViewController: UIViewController {
             }
         }
     }
-    
-    /// Save information to LoaiDichVu database
-    ///
-    /// - Parameter context: context to save
-    func saveToLoaiDichVuDB(context: NSManagedObjectContext){
-        
-        let fetchRequest: NSFetchRequest<LoaiDichVuDB> = LoaiDichVuDB.fetchRequest()
-        fetchRequest.returnsObjectsAsFaults = false
-        let values = [LoaiDichVu.dien.rawValue, LoaiDichVu.nuoc.rawValue, LoaiDichVu.internet.rawValue]
-        // Save each value to database
-        for value in values{
-            let predicate = NSPredicate(format: "%K == %@", "ten", value)
-            fetchRequest.predicate = predicate
-            
-            do{
-                let result = try context.fetch(fetchRequest)
-                if result.count == 0{
-                    let entity = NSEntityDescription.entity(forEntityName: "LoaiDichVu", in: context)
-                    let record = LoaiDichVuDB(entity: entity!, insertInto: context)
-                    
-                    record.ten = value
-                    
-                    _ = saveContext(context, with: value)
-                }
-            } catch {
-                let fetchError = error as NSError
-                print(fetchError)
-            }
-        }
-    }
-    
 }

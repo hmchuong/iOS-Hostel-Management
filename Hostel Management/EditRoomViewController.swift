@@ -12,7 +12,7 @@ import GaiaSDKUIKit
 class EditRoomViewController: UIViewController,UINavigationControllerDelegate, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource  {
 
     // MARK: - Properties
-    var phongtro: PhongTro?
+    var phongtro: Phong?
     var currentState: TinhTrang = .trong
     
     @IBOutlet weak var roomNameTextField: UITextField!
@@ -37,10 +37,10 @@ class EditRoomViewController: UIViewController,UINavigationControllerDelegate, U
         
         
         if let phongtro = phongtro {
-            navigationItem.title = "Phòng \(phongtro.maphong)"
-            roomNameTextField.text = phongtro.maphong
-            roomAreaTextField.text = String(phongtro.dientich)
-            roomPriceTextField.text = String(describing: phongtro.giaphong)
+            navigationItem.title = "Phòng \(phongtro.maPhong)"
+            roomNameTextField.text = phongtro.maPhong
+            roomAreaTextField.text = String(phongtro.dienTich)
+            roomPriceTextField.text = String(describing: phongtro.giaPhong)
             
             imagesButton.isHidden = false
             humansButton.isHidden = false
@@ -77,7 +77,7 @@ class EditRoomViewController: UIViewController,UINavigationControllerDelegate, U
         let maphong = roomNameTextField.text!
         let dientich = roomAreaTextField.text!
         let giaphong = roomPriceTextField.text!
-        saveButton.isEnabled = (maphong != phongtro?.maphong) || (Double(dientich) != phongtro?.dientich) || (giaphong != String(describing: phongtro?.giaphong))
+        saveButton.isEnabled = (maphong != phongtro?.maPhong) || (Double(dientich) != phongtro?.dienTich) || (giaphong != String(describing: phongtro?.giaPhong))
     }
 
     
@@ -104,7 +104,7 @@ class EditRoomViewController: UIViewController,UINavigationControllerDelegate, U
                     return false
                 }
             }*/
-            phongtro = PhongTro(maphong: roomNameTextField.text!, dientich: Double(roomAreaTextField.text!), giaphong: decimalWithString(string: roomPriceTextField.text!), tinhtrang: currentState)
+            phongtro = Phong(maphong:"0", ten: roomNameTextField.text!, dientich: Double(roomAreaTextField.text!), giaphong: decimalWithString(string: roomPriceTextField.text!), tinhtrang: currentState)
             return true
         }
         return true

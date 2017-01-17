@@ -29,8 +29,8 @@ class AccountViewController: UIViewController {
         // Load Account information
         usernameTextField.text = ChuNha.getInstance().getTendangnhap()
         emailTextField.text = ChuNha.getInstance().getEmail()
-        fullnameTextField.text = ChuNha.getInstance().hoten
-        phoneTextField.text = ChuNha.getInstance().sodienthoai
+        fullnameTextField.text = ChuNha.getInstance().hoTen
+        phoneTextField.text = ChuNha.getInstance().soDienThoai
     }
 
     override func didReceiveMemoryWarning() {

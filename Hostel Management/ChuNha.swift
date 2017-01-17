@@ -10,40 +10,40 @@ import Foundation
 import UIKit
 import CoreData
 
-class ChuNha{
+public class ChuNha{
     // MARK: - Properties
-    private var tendangnhap: String?
-    private var matkhau: String?
+    private var tenDangNhap: String?
+    private var matKhau: String?
     private var email: String?
-    public var hoten: String?
-    public var sodienthoai: String?
-    public var nhatros: [NhaTro]?
+    public var hoTen: String?
+    public var soDienThoai: String?
+    public var nhaTro: [NhaTro]?
     
     static var instance: ChuNha? = nil
     
     
     // MARK: - Methods
     public init(tendangnhap: String?, matkhau: String?, hoten: String?, sodienthoai: String?, email: String?){
-        self.tendangnhap = tendangnhap
-        self.matkhau = matkhau
-        self.hoten = hoten
-        self.sodienthoai = sodienthoai
+        self.tenDangNhap = tendangnhap
+        self.matKhau = matkhau
+        self.hoTen = hoten
+        self.soDienThoai = sodienthoai
         self.email = email
-        self.nhatros = []
+        self.nhaTro = []
     }
     
     public init(){
-        self.tendangnhap = ""
-        self.matkhau = ""
+        self.tenDangNhap = ""
+        self.matKhau = ""
         self.email = ""
-        self.hoten = ""
-        self.sodienthoai = ""
-        self.nhatros = []
+        self.hoTen = ""
+        self.soDienThoai = ""
+        self.nhaTro = []
     }
     
     // Get information methods
     public func getTendangnhap()-> String?{
-        return self.tendangnhap
+        return self.tenDangNhap
     }
     
     public func getEmail()-> String?{
@@ -70,49 +70,24 @@ class ChuNha{
         if tendangnhap.isEmpty || matkhau.isEmpty{
             return (false, unsuccessfulLogin)
         }
-        ChuNha.getInstance().tendangnhap = tendangnhap
-        ChuNha.getInstance().matkhau = matkhau
         
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        if #available(iOS 10.0, *) {
-            let context = appDelegate.persistentContainer.viewContext
-            if ChuNha.getInstance().getFromDB(with: context){
-                return (true, successfulLogin)
-            }else{
-                return (false, wrongAccount)
-            }
-            
-        } else {
-            print("ios must be 10.0")
+        let (chunha, message) = ChuNhaDB.login(tendangnhap: tendangnhap, matkhau: matkhau)
+        if chunha != nil{
+            ChuNha.instance = chunha
+            return (true, message)
+        }else{
+            return (false, message)
         }
-        return(false,undefinedError)
     }
     
     /// Sign up this account to database
     ///
     /// - Returns: (True, message) if successful or (False, Message) if unsuccessful
     public func signUp() -> (Bool, String){
-        if tendangnhap == nil || matkhau == nil{
+        if tenDangNhap == nil || matKhau == nil{
             return (false, unsuccessfulSignUp)
         }
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        if #available(iOS 10.0, *) {
-            let context = appDelegate.persistentContainer.viewContext
-            // Check the unique account on database
-            if !notYetInDB(with: context){
-                return (false, existedAccount)
-            }
-            // If account isn't there yet, insert to database, return successful
-            if addToDB(context){
-                return (true, successfulSignUp)
-            }else{
-                return (false, undefinedError)
-            }
-            
-        } else {
-            print("ios must be 10.0")
-        }
-        return(false,undefinedError)
+        return ChuNhaDB.signUp(tendangnhap: self.tenDangNhap!, matkhau: self.matKhau!, hoten: self.hoTen!, email: self.email!, sodienthoai: self.soDienThoai!)
     }
     
     /// Sign out
@@ -127,176 +102,41 @@ class ChuNha{
     ///   - new: new password
     /// - Returns: true/false and message
     public func updatePassword(old: String, new: String) -> (Bool, String){
-        if old != self.matkhau{
+        if old != self.matKhau{
             return (false, "Mật khẩu không khớp")
         }
-        self.matkhau = new
+        self.matKhau = new
         _ = update()
         return (true, "Đổi mật khẩu thành công")
     }
     
     /// Update hoten and sodienthoai to database
     public func update() -> Bool{
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        if #available(iOS 10.0, *) {
-            let context = appDelegate.persistentContainer.viewContext
-            
-            let fetchRequest: NSFetchRequest<ChuNhaDB> = ChuNhaDB.fetchRequest()
-            fetchRequest.returnsObjectsAsFaults = false
-            
-            let predicate = NSPredicate(format: "%K == %@", "tendangnhap", self.tendangnhap!)
-            fetchRequest.predicate = predicate
-            
-            do{
-                let result = try context.fetch(fetchRequest)
-                
-                let chunha = result[0]
-                chunha.hoten = self.hoten
-                chunha.sodienthoai = self.sodienthoai
-                chunha.matkhau = self.matkhau
-                
-                do {
-                    try chunha.managedObjectContext?.save()
-                    print ("UPDATE successfully")
-                    return true
-                }catch{
-                    let saveError = error as NSError
-                    print(saveError)
-                }
-            } catch {
-                let fetchError = error as NSError
-                print(fetchError)
-            }
-
-        } else {
-            print("ios must be 10.0")
-        }
-        return false
+        return ChuNhaDB.update(tendangnhap: self.tenDangNhap!, hoten: self.hoTen!, sodienthoai: self.soDienThoai!, matkhau: self.matKhau!)
     }
     
-    /// Check account is existed
-    ///
-    /// - Parameter context: NSManagedObjectContext
-    /// - Returns: true if account is not existed in DB, false if otherwise
-    private func notYetInDB(with context: NSManagedObjectContext) -> Bool{
-        let fetchRequest: NSFetchRequest<ChuNhaDB> = ChuNhaDB.fetchRequest()
-        fetchRequest.returnsObjectsAsFaults = false
-        
-        let predicate = NSPredicate(format: "%K == %@", "tendangnhap", self.tendangnhap!)
-        fetchRequest.predicate = predicate
-        
-        do{
-            let result = try context.fetch(fetchRequest)
-            if result.count == 0{
-                return true
-            }else{
-                return false
-            }
-        } catch {
-            let fetchError = error as NSError
-            print(fetchError)
-            return false
-        }
-
+    public func getNhaTro(){
+        self.nhaTro = NhaTroDB.getNhaTroOf(tenDangNhap!)
     }
-    
-    /// Add new account to database
-    ///
-    /// - Parameter context: NSManagedObjectContext
-    /// - Returns: true if successful, false if otherwise
-    private func addToDB(_ context: NSManagedObjectContext) -> Bool{
-        let entity = NSEntityDescription.entity(forEntityName: "ChuNha", in: context)
-        let record = ChuNhaDB(entity: entity!, insertInto: context)
         
-        record.tendangnhap = self.tendangnhap
-        record.matkhau = self.matkhau
-        record.hoten = self.hoten
-        record.sodienthoai = self.sodienthoai
-        record.email = self.email
-        
-        return saveContext(context, with: self.tendangnhap!)
-
-    }
-    
-    /// Get account from database
-    ///
-    /// - Parameter context: context
-    /// - Returns: true if successful, false if otherwise
-    private func getFromDB(with context: NSManagedObjectContext) -> Bool{
-        
-        let fetchRequest: NSFetchRequest<ChuNhaDB> = ChuNhaDB.fetchRequest()
-        fetchRequest.returnsObjectsAsFaults = false
-        
-        let predicate = NSPredicate(format: "%K == %@ AND %K == %@", "tendangnhap", self.tendangnhap!, "matkhau", self.matkhau!)
-        fetchRequest.predicate = predicate
-        
-        do{
-            let result = try context.fetch(fetchRequest)
-            if result.count == 0{
-                return false
-            }else{
-                self.hoten = result[0].hoten
-                self.email = result[0].email
-                self.sodienthoai = result[0].sodienthoai
-                
-                // Get NhaTro(s)
-                let nhatros: Set<NhaTroDB> = result[0].nhatro! as! Set<NhaTroDB>
-                for nhatro in nhatros{
-                    self.nhatros?.append(NhaTro(diachi: nhatro.diachi!, ten: nhatro.ten!))
-                }
-                
-                return true
-            }
-        } catch {
-            let fetchError = error as NSError
-            print(fetchError)
-            return false
-        }
-        
-    }
-    
     /// Add new NhaTro to databse
     ///
     /// - Parameter nhatro: new NhaTro
     /// - Returns: true or false
-    public func addNhaTro(_ nhatro: NhaTro)->Bool{
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        if #available(iOS 10.0, *) {
-            let context = appDelegate.persistentContainer.viewContext
-            
-            let fetchRequest: NSFetchRequest<ChuNhaDB> = ChuNhaDB.fetchRequest()
-            fetchRequest.returnsObjectsAsFaults = false
-            
-            let predicate = NSPredicate(format: "%K == %@", "tendangnhap", self.tendangnhap!)
-            fetchRequest.predicate = predicate
-            
-            do{
-                let result = try context.fetch(fetchRequest)
-                let entityDescription = NSEntityDescription.entity(forEntityName: "NhaTro", in: context)
-                let nhatroDB = NhaTroDB(entity: entityDescription!, insertInto: context)
-                nhatroDB.diachi = nhatro.diachi
-                nhatroDB.ten = nhatro.ten
-                
-                result[0].addToNhatro(nhatroDB)
-                
-                
-                do {
-                    try result[0].managedObjectContext?.save()
-                    print ("Add new NhaTro successfully")
-                    return true
-                }catch{
-                    let saveError = error as NSError
-                    print(saveError)
-                }
-            } catch {
-                let fetchError = error as NSError
-                print(fetchError)
+    public func addNhaTro(_ nhatro: NhaTro)->(Bool, String){
+        for ins in ChuNha.getInstance().nhaTro!{
+            if ins.ten == nhatro.ten{
+                return (false, existedHostel)
             }
-
-        } else {
-            print("ios must be 10.0")
         }
-        return false
+        nhatro.maNhaTro = generateMaNhaTro()
+        if NhaTroDB.add(nhatro: nhatro, of: self.tenDangNhap!){
+            self.nhaTro?.append(nhatro)
+            return (true,"")
+        }else{
+            return (false, errorAddHostel)
+        }
+        
     }
     
     /// Delete NhaTro element
@@ -304,83 +144,33 @@ class ChuNha{
     /// - Parameter nhatro: NhaTro to delete
     /// - Returns: true or false
     public func deleteNhaTro(_ nhatro: NhaTro)->Bool{
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        if #available(iOS 10.0, *) {
-            let context = appDelegate.persistentContainer.viewContext
-            
-            let fetchRequest: NSFetchRequest<ChuNhaDB> = ChuNhaDB.fetchRequest()
-            fetchRequest.returnsObjectsAsFaults = false
-            
-            let predicate = NSPredicate(format: "%K == %@", "tendangnhap", self.tendangnhap!)
-            fetchRequest.predicate = predicate
-            
-            do{
-                let result = try context.fetch(fetchRequest)
-                let nhatros: Set<NhaTroDB> = result[0].nhatro! as! Set<NhaTroDB>
-                for ins in nhatros{
-                    if ins.diachi == nhatro.diachi && ins.ten == nhatro.ten{
-                        result[0].removeFromNhatro(ins)
-                    }
-                }
-                
-                do {
-                    try result[0].managedObjectContext?.save()
-                    print ("Delete NhaTro successfully")
-                    return true
-                }catch{
-                    let saveError = error as NSError
-                    print(saveError)
-                }
-            } catch {
-                let fetchError = error as NSError
-                print(fetchError)
-            }
-            
-        } else {
-            print("ios must be 10.0")
-        }
-        return false
+        return NhaTroDB.delete(nhatro: nhatro)
     }
     
     public func updateNhaTro(old: NhaTro, new: NhaTro)-> Bool{
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        if #available(iOS 10.0, *) {
-            let context = appDelegate.persistentContainer.viewContext
-            
-            let fetchRequest: NSFetchRequest<ChuNhaDB> = ChuNhaDB.fetchRequest()
-            fetchRequest.returnsObjectsAsFaults = false
-            
-            let predicate = NSPredicate(format: "%K == %@", "tendangnhap", self.tendangnhap!)
-            fetchRequest.predicate = predicate
-            
-            do{
-                let result = try context.fetch(fetchRequest)
-                let nhatros: Set<NhaTroDB> = result[0].nhatro! as! Set<NhaTroDB>
-                for ins in nhatros{
-                    if ins.diachi == old.diachi && ins.ten == old.ten{
-                        ins.diachi = new.diachi
-                        ins.ten = new.ten
-                    }
+        return NhaTroDB.update(old: old, new: new)
+    }
+    
+    /// Generate unique MaNhaTro
+    ///
+    /// - Returns: String of MaNhaTro
+    private func generateMaNhaTro()-> String{
+        var ma = 0
+        let ten: String = self.tenDangNhap ?? ""
+        let max: Int = self.nhaTro?.count ?? 0
+        for i in 0...max{
+            var exist = false
+            for ins in (self.nhaTro)!{
+                if ins.maNhaTro == "\(ten)_\(i)"{
+                    exist = true
                 }
-                result[0].nhatro = nhatros as NSSet?
-                
-                do {
-                    try result[0].managedObjectContext?.save()
-                    print ("Update NhaTro successfully")
-                    return true
-                }catch{
-                    let saveError = error as NSError
-                    print(saveError)
-                }
-            } catch {
-                let fetchError = error as NSError
-                print(fetchError)
+            }
+            if exist == false{
+                ma = i
             }
             
-        } else {
-            print("ios must be 10.0")
         }
-        return false
+        return "\(ten)_\(ma)"
     }
     
 }

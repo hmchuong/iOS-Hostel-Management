@@ -44,19 +44,14 @@ class HostelTableViewController: UITableViewController {
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
                 // Update an existing hostel.
                 if ChuNha.getInstance().updateNhaTro(old: nhatros[selectedIndexPath.row], new: nhatro){
-                    ChuNha.getInstance().nhatros?[selectedIndexPath.row] = nhatro
+                    ChuNha.getInstance().nhaTro?[selectedIndexPath.row] = nhatro
                     nhatros[selectedIndexPath.row] = nhatro
                     tableView.reloadRows(at: [selectedIndexPath], with: .none)
                 }
             }else{
                 let newIndexPath = IndexPath(row: nhatros.count, section: 0)
-                if ChuNha.getInstance().addNhaTro(nhatro){
-                    ChuNha.getInstance().nhatros?.append(nhatro)
-                    nhatros.append(nhatro)
-                    tableView.insertRows(at: [newIndexPath], with: .automatic)
-                }else{
-                    print("Cannot insert to database")
-                }
+                nhatros.append(nhatro)
+                tableView.insertRows(at: [newIndexPath], with: .automatic)
             }
         }
         
@@ -64,7 +59,8 @@ class HostelTableViewController: UITableViewController {
     
     // MARK: - Private methods
     private func loadNhatros(){
-        nhatros = ChuNha.getInstance().nhatros ?? []
+        ChuNha.getInstance().getNhaTro()
+        nhatros = ChuNha.getInstance().nhaTro!
     }
 
     // MARK: - Table view data source
@@ -87,7 +83,7 @@ class HostelTableViewController: UITableViewController {
         let nhatro = nhatros[indexPath.row]
         
         cell.hostelIDLabel.text = nhatro.ten
-        cell.hostelAddressLabel.text = nhatro.diachi
+        cell.hostelAddressLabel.text = nhatro.diaChi
 
         return cell
     }
@@ -106,7 +102,7 @@ class HostelTableViewController: UITableViewController {
             // Delete the row from the data source
             if ChuNha.getInstance().deleteNhaTro(nhatros[indexPath.row]){
                 nhatros.remove(at: indexPath.row)
-                ChuNha.getInstance().nhatros?.remove(at: indexPath.row)
+                ChuNha.getInstance().nhaTro?.remove(at: indexPath.row)
                 tableView.deleteRows(at: [indexPath], with: .fade)
             }else{
                 print("Cannot delete NhaTro")

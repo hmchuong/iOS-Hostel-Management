@@ -110,3 +110,14 @@ func decimalWithString(string: String) -> NSDecimalNumber {
     formatter.generatesDecimalNumbers = true
     return formatter.number(from: string) as? NSDecimalNumber ?? 0
 }
+
+func getContext() -> NSManagedObjectContext?{
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    if #available(iOS 10.0, *) {
+        return appDelegate.persistentContainer.viewContext
+        
+    } else {
+        print("ios must be 10.0")
+        return nil
+    }
+}

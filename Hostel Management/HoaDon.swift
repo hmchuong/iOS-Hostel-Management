@@ -9,14 +9,15 @@
 import Foundation
 
 class HoaDon{
-    var mahoadon: Int64
-    var dathanhtoan: Bool = false
-    var mota: String? // Ghi chú
-    var dichvusinhhoat: [DichVuSinhHoat]
+    var maHoaDon: String
+    var daThanhToan: Bool = false
+    var ghiChu: String?
+    var danhMucThuPhi: [DichVuSinhHoat]
     
-    public init(mahoadon: Int64, mota: String?){
-        self.mahoadon = mahoadon
-        self.mota = mota
-        dichvusinhhoat = []
+    public init(mahoadon: String, dathanhtoan: Bool, ghichu: String){
+        self.maHoaDon = mahoadon
+        self.daThanhToan = dathanhtoan
+        self.ghiChu = ghichu
+        danhMucThuPhi = []
     }
 }

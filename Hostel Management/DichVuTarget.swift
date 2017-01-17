@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+protocol DichVuTarget{
+    func changePrice(_ gia: [(Int, Int)])
+    func calculateMoney(chisocu: Int, chisomoi: Int) -> Int
+}

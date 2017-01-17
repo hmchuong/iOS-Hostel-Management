@@ -20,6 +20,8 @@ let unsuccessfulLogin: String = "Cannot login"
 let wrongAccount: String = "Tên đăng nhập hoặc mật khẩu sai!"
 let successfulLogin: String = "Đăng nhập thành công"
 
+let existedHostel = "Nhà trọ đã tồn tại!"
+let errorAddHostel = "Lỗi database"
 
 // KEY SHAREPREFERENCES
 let KEYUSERNAME = "CURRENTUSERNAME"
@@ -32,7 +34,7 @@ enum TinhTrang: String{
     case suaChua = "sửa chữa"
 }
 
-enum GioiTinh: String{
+enum GioiTinh: String {
     case nam = "nam"
     case nu = "nữ"
 }

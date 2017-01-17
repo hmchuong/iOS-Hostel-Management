@@ -19,8 +19,8 @@ class EditAccountViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
 
         // Load account information
-        fullnameTextField.text = ChuNha.getInstance().hoten
-        phoneTextField.text = ChuNha.getInstance().sodienthoai
+        fullnameTextField.text = ChuNha.getInstance().hoTen
+        phoneTextField.text = ChuNha.getInstance().soDienThoai
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,8 +39,8 @@ class EditAccountViewController: UIViewController, UITextFieldDelegate {
         _ = self.navigationController?.popViewController(animated: true)
     }
     @IBAction func tapSave(_ sender: UIBarButtonItem) {
-        ChuNha.getInstance().hoten = fullnameTextField.text
-        ChuNha.getInstance().sodienthoai = phoneTextField.text
+        ChuNha.getInstance().hoTen = fullnameTextField.text
+        ChuNha.getInstance().soDienThoai = phoneTextField.text
         if ChuNha.getInstance().update(){
             _ = self.navigationController?.popViewController(animated: true)
         }else{

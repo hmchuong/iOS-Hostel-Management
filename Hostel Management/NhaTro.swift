@@ -8,27 +8,29 @@
 
 import Foundation
 
-class NhaTro{
+public class NhaTro{
     // MARK: - Properties
-    public var sophong: Int64 = 0
-    var diachi: String? = nil
+    var soPhongTrong: Int
+    var diaChi: String? = nil
     var ten: String? = nil
-    var phongtro: [PhongTro] = []{
+    var maNhaTro: String
+    var phongTro: [Phong] = []{
         didSet{
-            var count = 0
-            for ins in phongtro{
-                if ins.tinhtrang == .trong{
-                    count += 1
+            soPhongTrong = 0
+            for ins in self.phongTro{
+                if ins.tinhTrang == .trong{
+                    soPhongTrong += 1
                 }
             }
-            sophong = Int64(count)
         }
     }
     
     // MARK: - Methods
-    public init(diachi: String, ten: String){
-        self.diachi = diachi
+    public init(manhatro: String, diachi: String, ten: String){
+        self.diaChi = diachi
         self.ten = ten
+        self.soPhongTrong = 0
+        self.maNhaTro = manhatro
     }
 }
 

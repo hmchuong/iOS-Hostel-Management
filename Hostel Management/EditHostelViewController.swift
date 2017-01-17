@@ -30,9 +30,9 @@ class EditHostelViewController: UIViewController, UITextFieldDelegate, UINavigat
         if let nhatro = nhatro {
             navigationItem.title = nhatro.ten
             hostelName.text = nhatro.ten
-            hostelAddress.text = nhatro.diachi
+            hostelAddress.text = nhatro.diaChi
             emptyRoom.isHidden = false
-            let s = "\(nhatro.sophong) phòng trống"
+            let s = "\(nhatro.soPhongTrong) phòng trống"
             emptyRoom.setTitle(s, for: .normal)
         }
         
@@ -70,18 +70,19 @@ class EditHostelViewController: UIViewController, UITextFieldDelegate, UINavigat
         }
     }
 
-   override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         let button = sender as? UIBarButtonItem
         if button === saveButton{
+            let isAdd = nhatro == nil
             let name = hostelName.text ?? ""
             let address = hostelAddress.text ?? ""
             
-            nhatro = NhaTro(diachi: address, ten: name)
-            
-            for ins in ChuNha.getInstance().nhatros!{
-                if ins.ten == nhatro?.ten{
+            nhatro = NhaTro(manhatro: "", diachi: address, ten: name)
+            if isAdd{
+                let (ok, message) = ChuNha.getInstance().addNhaTro(nhatro!)
+                if ok == false{
                     nhatro = nil
-                    showPopUpMessage(title: "Không thể tạo nhà trọ", message: "Tên nhà trọ đã tồn tại!", view: self)
+                    showPopUpMessage(title: "Không thể tạo nhà trọ", message: message, view: self)
                     return false
                 }
             }
@@ -89,7 +90,7 @@ class EditHostelViewController: UIViewController, UITextFieldDelegate, UINavigat
         }
         return true
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let button = sender as? GaiaUIButton, button === emptyRoom{
             let destViewController: RoomTableViewController = segue.destination as! RoomTableViewController
@@ -102,7 +103,7 @@ class EditHostelViewController: UIViewController, UITextFieldDelegate, UINavigat
         // Disable the Save button if the text field is empty.
         let ten = hostelName.text ?? ""
         let diachi = hostelAddress.text ?? ""
-        saveButton.isEnabled = (ten != nhatro?.ten) || (diachi != nhatro?.diachi)
+        saveButton.isEnabled = (ten != nhatro?.ten) || (diachi != nhatro?.diaChi)
     }
     
     // MARK: - Actions

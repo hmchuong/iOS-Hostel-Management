@@ -10,26 +10,35 @@ import Foundation
 import UIKit
 import CoreData
 
-class PhongTro{
+class Phong{
     // MARK: - Properties
-    var maphong: String
-    var dientich: Double
-    var giaphong: NSDecimalNumber
-    var tinhtrang: TinhTrang
-    var hinhanhphong: [UIImage]
-    var nguoithue: NguoiThueTro?
-    var hosonhankhau: [HoSoNhanKhau]
-    var hoadon: [HoaDon]
+    var maPhong: String
+    var ten: String
+    var dienTich: Double
+    var giaPhong: NSDecimalNumber
+    var tinhTrang: TinhTrang{
+        didSet{
+            if tinhTrang != .daThue{
+                thuePhong = nil
+            }
+        }
+    }
+    var hinhAnhMinhHoa: [UIImage]
+    var thuePhong: ThuePhong? = nil{
+        didSet{
+            if thuePhong != nil{
+                self.tinhTrang = .daThue
+            }
+        }
+    }
     
-    public init(maphong: String, dientich: Double?, giaphong: NSDecimalNumber?, tinhtrang: TinhTrang){
-        self.maphong = maphong
-        self.dientich = dientich ?? 0
-        self.giaphong = giaphong ?? 0
-        self.tinhtrang = tinhtrang
-        self.hinhanhphong = [#imageLiteral(resourceName: "PhongTro")]
-        self.nguoithue = nil
-        self.hosonhankhau = []
-        self.hoadon = []
+    public init(maphong: String, ten: String, dientich: Double?, giaphong: NSDecimalNumber?, tinhtrang: TinhTrang){
+        self.maPhong = maphong
+        self.ten = ten
+        self.dienTich = dientich ?? 0
+        self.giaPhong = giaphong ?? 0
+        self.tinhTrang = tinhtrang
+        self.hinhAnhMinhHoa = []
     }
     
 }

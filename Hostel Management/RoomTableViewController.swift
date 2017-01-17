@@ -11,7 +11,7 @@ import UIKit
 class RoomTableViewController: UITableViewController,UINavigationControllerDelegate {
     
     var nhatro: NhaTro? = nil
-    var phongtros: [PhongTro]=[]
+    var phongtros: [Phong]=[]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,9 +39,9 @@ class RoomTableViewController: UITableViewController,UINavigationControllerDeleg
 
     // MARK: - Private methods
     private func loadPhongTros(){
-        let phongtro1 = PhongTro(maphong: "1", dientich: 35, giaphong: 3500000, tinhtrang: .trong)
-        let phongtro2 = PhongTro(maphong: "2", dientich: 45, giaphong: 4500000, tinhtrang: .daThue)
-        let phongtro3 = PhongTro(maphong: "3", dientich: 40, giaphong: 4000000, tinhtrang: .suaChua)
+        let phongtro1 = Phong(maphong: "1",ten: "1", dientich: 35, giaphong: 3500000, tinhtrang: .trong)
+        let phongtro2 = Phong(maphong: "2", ten: "2", dientich: 45, giaphong: 4500000, tinhtrang: .daThue)
+        let phongtro3 = Phong(maphong: "3", ten: "3", dientich: 40, giaphong: 4000000, tinhtrang: .suaChua)
         phongtros = [phongtro1, phongtro2, phongtro3]
     }
     
@@ -64,12 +64,12 @@ class RoomTableViewController: UITableViewController,UINavigationControllerDeleg
         
         let phongtro = phongtros[indexPath.row]
         
-        cell.roomName.text = "Phòng \(phongtro.maphong)"
-        cell.roomArea.text = "Diện tích: \(phongtro.dientich) m2"
-        cell.roomPrice.text = "Giá: \(phongtro.giaphong) đồng"
-        cell.roomState.text = "Tình trạng: \(phongtro.tinhtrang.rawValue)"
-        if phongtro.hinhanhphong.count > 0{
-            cell.detailImage.image = phongtro.hinhanhphong[0]
+        cell.roomName.text = "Phòng \(phongtro.maPhong)"
+        cell.roomArea.text = "Diện tích: \(phongtro.dienTich) m2"
+        cell.roomPrice.text = "Giá: \(phongtro.giaPhong) đồng"
+        cell.roomState.text = "Tình trạng: \(phongtro.tinhTrang.rawValue)"
+        if phongtro.hinhAnhMinhHoa.count > 0{
+            cell.detailImage.image = phongtro.hinhAnhMinhHoa[0]
             cell.detailImage.contentMode = UIViewContentMode.scaleAspectFit
         }
         
