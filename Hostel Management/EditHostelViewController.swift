@@ -26,8 +26,14 @@ class EditHostelViewController: UIViewController, UITextFieldDelegate, UINavigat
         
         emptyRoom.isHidden = true
         
+        
+        saveButton.isEnabled = false
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         // Set up views if editing an existing NhaTro.
         if let nhatro = nhatro {
+            nhatro.getPhongTro()
             navigationItem.title = nhatro.ten
             hostelName.text = nhatro.ten
             hostelAddress.text = nhatro.diaChi
@@ -35,8 +41,7 @@ class EditHostelViewController: UIViewController, UITextFieldDelegate, UINavigat
             let s = "\(nhatro.soPhongTrong) phòng trống"
             emptyRoom.setTitle(s, for: .normal)
         }
-        
-        saveButton.isEnabled = false
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -93,8 +98,8 @@ class EditHostelViewController: UIViewController, UITextFieldDelegate, UINavigat
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let button = sender as? GaiaUIButton, button === emptyRoom{
-            let destViewController: RoomTableViewController = segue.destination as! RoomTableViewController
-            destViewController.nhatro = self.nhatro
+            updateCurrentNhaTro()
+            NhaTro.current = self.nhatro
         }
     }
     

@@ -119,7 +119,7 @@ public class ChuNha{
         self.nhaTro = NhaTroDB.getNhaTroOf(tenDangNhap!)
     }
         
-    /// Add new NhaTro to databse
+    /// Add new NhaTro to database
     ///
     /// - Parameter nhatro: new NhaTro
     /// - Returns: true or false
@@ -134,7 +134,7 @@ public class ChuNha{
             self.nhaTro?.append(nhatro)
             return (true,"")
         }else{
-            return (false, errorAddHostel)
+            return (false, errorDB)
         }
         
     }
@@ -144,9 +144,19 @@ public class ChuNha{
     /// - Parameter nhatro: NhaTro to delete
     /// - Returns: true or false
     public func deleteNhaTro(_ nhatro: NhaTro)->Bool{
+        for ins in nhatro.phongTro{
+            _ = nhatro.deletePhong(ins)
+        }
         return NhaTroDB.delete(nhatro: nhatro)
+        
     }
     
+    /// Update NhaTRo
+    ///
+    /// - Parameters:
+    ///   - old: old value
+    ///   - new: new value
+    /// - Returns: true or false
     public func updateNhaTro(old: NhaTro, new: NhaTro)-> Bool{
         return NhaTroDB.update(old: old, new: new)
     }

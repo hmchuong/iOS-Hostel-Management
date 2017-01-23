@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import CoreData
 
-class Phong{
+public class Phong{
     // MARK: - Properties
     var maPhong: String
     var ten: String
@@ -31,14 +31,21 @@ class Phong{
             }
         }
     }
+    public static var current: Phong?
     
-    public init(maphong: String, ten: String, dientich: Double?, giaphong: NSDecimalNumber?, tinhtrang: TinhTrang){
+    public init(maphong: String, ten: String, dientich: Double?, giaphong: NSDecimalNumber?, tinhtrang: TinhTrang, nguoithue: String){
         self.maPhong = maphong
         self.ten = ten
         self.dienTich = dientich ?? 0
         self.giaPhong = giaphong ?? 0
         self.tinhTrang = tinhtrang
         self.hinhAnhMinhHoa = []
+        if nguoithue != ""{
+            let taiKhoan = NguoiThueTroDB.get(with: nguoithue)
+            if taiKhoan != nil{
+                self.thuePhong = ThuePhong(id: (taiKhoan?.id)!, token: (taiKhoan?.matoken)!)
+            }
+        }
     }
     
 }

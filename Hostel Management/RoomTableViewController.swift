@@ -9,8 +9,6 @@
 import UIKit
 
 class RoomTableViewController: UITableViewController,UINavigationControllerDelegate {
-    
-    var nhatro: NhaTro? = nil
     var phongtros: [Phong]=[]
     
     override func viewDidLoad() {
@@ -31,6 +29,25 @@ class RoomTableViewController: UITableViewController,UINavigationControllerDeleg
             self.editButtonItem.title = "Xoá"
         }
     }
+    
+    @IBAction func unwindToRoomList(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.source as? EditRoomViewController, let phong = sourceViewController.phongtro {
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                // Update an existing hostel.
+                if (NhaTro.current?.updatePhongTro(old: phongtros[selectedIndexPath.row], new: phong))!{
+                    NhaTro.current?.phongTro[selectedIndexPath.row] = phong
+                    phongtros[selectedIndexPath.row] = phong
+                    tableView.reloadRows(at: [selectedIndexPath], with: .none)
+                }
+            }else{
+                let newIndexPath = IndexPath(row: phongtros.count, section: 0)
+                phongtros.append(phong)
+                tableView.insertRows(at: [newIndexPath], with: .automatic)
+            }
+        }
+        
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -39,10 +56,7 @@ class RoomTableViewController: UITableViewController,UINavigationControllerDeleg
 
     // MARK: - Private methods
     private func loadPhongTros(){
-        let phongtro1 = Phong(maphong: "1",ten: "1", dientich: 35, giaphong: 3500000, tinhtrang: .trong)
-        let phongtro2 = Phong(maphong: "2", ten: "2", dientich: 45, giaphong: 4500000, tinhtrang: .daThue)
-        let phongtro3 = Phong(maphong: "3", ten: "3", dientich: 40, giaphong: 4000000, tinhtrang: .suaChua)
-        phongtros = [phongtro1, phongtro2, phongtro3]
+        self.phongtros =  (NhaTro.current?.phongTro)!
     }
     
     // MARK: - Table view data source
@@ -64,7 +78,7 @@ class RoomTableViewController: UITableViewController,UINavigationControllerDeleg
         
         let phongtro = phongtros[indexPath.row]
         
-        cell.roomName.text = "Phòng \(phongtro.maPhong)"
+        cell.roomName.text = "Phòng \(phongtro.ten)"
         cell.roomArea.text = "Diện tích: \(phongtro.dienTich) m2"
         cell.roomPrice.text = "Giá: \(phongtro.giaPhong) đồng"
         cell.roomState.text = "Tình trạng: \(phongtro.tinhTrang.rawValue)"
@@ -89,9 +103,11 @@ class RoomTableViewController: UITableViewController,UINavigationControllerDeleg
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
-            phongtros.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            if (NhaTro.current?.deletePhong(phongtros[indexPath.row]))!{
+                phongtros.remove(at: indexPath.row)
+                NhaTro.current?.phongTro.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
             
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -114,14 +130,30 @@ class RoomTableViewController: UITableViewController,UINavigationControllerDeleg
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        super.prepare(for: segue, sender: sender)
+        if segue.identifier! == "ShowRoomDetail"{
+            guard let roomDetailViewController = segue.destination as? EditRoomViewController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            
+            guard let selectedRoomCell = sender as? RoomTableViewCell else {
+                fatalError("Unexpected sender: \(sender)")
+            }
+            
+            guard let indexPath = tableView.indexPath(for: selectedRoomCell) else {
+                fatalError("The selected cell is not being displayed by the table")
+            }
+
+            let selectedRoom = phongtros[indexPath.row]
+            roomDetailViewController.phongtro = selectedRoom
+            
+        }
     }
-    */
+    
 
 }

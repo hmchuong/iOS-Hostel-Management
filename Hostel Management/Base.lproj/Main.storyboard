@@ -1775,7 +1775,7 @@
                                     <outlet property="roomName" destination="bqg-dx-6GW" id="PzT-wj-gj6"/>
                                     <outlet property="roomPrice" destination="KZK-ko-U6W" id="Snu-aR-V3I"/>
                                     <outlet property="roomState" destination="Sl8-P1-0Mu" id="2oB-cM-4vr"/>
-                                    <segue destination="VSz-vo-CcL" kind="show" id="Jtj-cS-ELq"/>
+                                    <segue destination="VSz-vo-CcL" kind="show" identifier="ShowRoomDetail" id="Jtj-cS-ELq"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1788,7 +1788,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Uzw-cR-Lf4">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="z7Y-Cy-TWO" kind="presentation" id="gvz-ZX-l9R"/>
+                                <segue destination="z7Y-Cy-TWO" kind="presentation" identifier="AddRoom" id="gvz-ZX-l9R"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1812,7 +1812,7 @@
                             <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Ogu-TN-tHd">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mã phòng:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ewz-Yv-hgj">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tên phòng:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ewz-Yv-hgj">
                                 <rect key="frame" x="16" y="94" width="100" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="DGK-s9-x5M"/>
@@ -2035,6 +2035,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Lưu" id="Mx4-KZ-WXt">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="AYA-Lm-g4f" kind="unwind" unwindAction="unwindToRoomListWithSender:" id="wxw-ZF-533"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -2051,6 +2054,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O0t-uo-hXe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="AYA-Lm-g4f" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="12191.200000000001" y="-1028.6356821589206"/>
         </scene>

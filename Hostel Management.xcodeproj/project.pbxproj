@@ -470,7 +470,7 @@
 				TargetAttributes = {
 					AD91E6981E10229400629F35 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = M3R5747G42;
+						DevelopmentTeam = V89MEC28GE;
 						ProvisioningStyle = Automatic;
 					};
 					AD91E6AF1E10229400629F35 = {
@@ -889,7 +889,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: minhchuong.itus@icloud.com (UZNR2TUUY2)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = M3R5747G42;
+				DEVELOPMENT_TEAM = V89MEC28GE;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Hostel\\ Management",
@@ -900,7 +900,7 @@
 					"$(PROJECT_DIR)/Hostel\\ Management",
 				);
 				INFOPLIST_FILE = "Hostel Management/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chuonghuynh.hostelmanagement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -916,7 +916,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: minhchuong.itus@icloud.com (UZNR2TUUY2)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = M3R5747G42;
+				DEVELOPMENT_TEAM = V89MEC28GE;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Hostel\\ Management",
@@ -927,7 +927,7 @@
 					"$(PROJECT_DIR)/Hostel\\ Management",
 				);
 				INFOPLIST_FILE = "Hostel Management/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chuonghuynh.hostelmanagement;
 				PRODUCT_NAME = "$(TARGET_NAME)";

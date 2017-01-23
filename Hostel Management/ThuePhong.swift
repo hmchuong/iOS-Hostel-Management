@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ThuePhong{
+public class ThuePhong{
     // MARK: - Properties
     var dsThanhVien: [HoSoNhanKhau]?
     var hoaDon: [HoaDon]?

@@ -34,18 +34,22 @@ class EditRoomViewController: UIViewController,UINavigationControllerDelegate, U
         billsButton.isHidden = true
         stateButton.isHidden = true
         statePickerView.isHidden = true
-        
+        saveButton.isEnabled = false
         
         if let phongtro = phongtro {
-            navigationItem.title = "Phòng \(phongtro.maPhong)"
-            roomNameTextField.text = phongtro.maPhong
+            navigationItem.title = "Phòng \(phongtro.ten)"
+            roomNameTextField.text = phongtro.ten
             roomAreaTextField.text = String(phongtro.dienTich)
             roomPriceTextField.text = String(describing: phongtro.giaPhong)
-            
+            currentState = phongtro.tinhTrang
+            stateButton.setTitle("Tình trạng: \(currentState.rawValue)", for: .normal)
             imagesButton.isHidden = false
             humansButton.isHidden = false
             billsButton.isHidden = false
             stateButton.isHidden = false
+            if currentState == .trong {
+                stateButton.isEnabled = false
+            }
         }
         
         
@@ -67,8 +71,11 @@ class EditRoomViewController: UIViewController,UINavigationControllerDelegate, U
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        updateSaveButtonState()
-        navigationItem.title = textField.text
+        if textField == roomNameTextField{
+            updateSaveButtonState()
+            let name: String = textField.text ?? ""
+            navigationItem.title = "Phòng \(name)"
+        }
     }
     
     // MARK: - Private methods
@@ -92,19 +99,22 @@ class EditRoomViewController: UIViewController,UINavigationControllerDelegate, U
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         let button = sender as? UIBarButtonItem
         if button === saveButton{
-            /*
-            let name = hostelName.text ?? ""
-            let address = hostelAddress.text ?? ""
-            
-            nhatro = NhaTro(diachi: address, ten: name)
-            for ins in ChuNha.getInstance().nhatros!{
-                if ins.ten == nhatro?.ten{
-                    nhatro = nil
-                    showPopUpMessage(title: "Không thể tạo nhà trọ", message: "Tên nhà trọ đã tồn tại!", view: self)
+            let isAdd = phongtro == nil
+            let ten = roomNameTextField.text ?? ""
+            let dientich = Double(roomAreaTextField.text!) ?? 0
+            let giaphong = decimalWithString(string: roomPriceTextField.text!) 
+            let tinhtrang = currentState
+            let nguoithue: String = phongtro?.thuePhong?.taiKhoanPhong?.id ?? ""
+            let maphong: String = phongtro?.maPhong ?? ""
+            phongtro = Phong(maphong: maphong, ten: ten, dientich: dientich, giaphong: giaphong, tinhtrang: tinhtrang, nguoithue: nguoithue)
+            if isAdd{
+                let (ok, message) = (NhaTro.current?.addPhongTro(phongtro!))!
+                if ok == false{
+                    phongtro = nil
+                    showPopUpMessage(title: "Không thể tạo phòng trọ", message: message, view: self)
                     return false
                 }
-            }*/
-            phongtro = Phong(maphong:"0", ten: roomNameTextField.text!, dientich: Double(roomAreaTextField.text!), giaphong: decimalWithString(string: roomPriceTextField.text!), tinhtrang: currentState)
+            }
             return true
         }
         return true

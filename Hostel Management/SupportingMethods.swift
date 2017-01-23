@@ -121,3 +121,25 @@ func getContext() -> NSManagedObjectContext?{
         return nil
     }
 }
+
+func updateCurrentNhaTro(){
+    if NhaTro.current != nil{
+        let len: Int = ChuNha.getInstance().nhaTro?.count ?? 0
+        for i in 0..<len{
+            if ChuNha.getInstance().nhaTro?[i].maNhaTro == NhaTro.current?.maNhaTro{
+                ChuNha.getInstance().nhaTro?[i] = NhaTro.current!
+            }
+        }
+    }
+}
+
+func updateCurrentPhongTro(){
+    if Phong.current != nil{
+        let len: Int = NhaTro.current?.phongTro.count ?? 0
+        for i in 0..<len{
+            if NhaTro.current?.phongTro[i].maPhong == Phong.current?.maPhong{
+                NhaTro.current?.phongTro[i] = Phong.current!
+            }
+        }
+    }
+}

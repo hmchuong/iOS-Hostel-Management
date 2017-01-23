@@ -9,12 +9,14 @@
 import Foundation
 import CoreData
 
-class TaiKhoanPhong{
+public class TaiKhoanPhong{
     var id: String
     var matoken: String
     
     public init(id: String, matoken: String){
         self.id = id
         self.matoken = matoken
+        print ("\(id)")
+        print("\(matoken)")
     }
 }

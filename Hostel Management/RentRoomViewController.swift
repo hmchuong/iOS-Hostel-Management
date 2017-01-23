@@ -42,16 +42,20 @@ class RentRoomViewController: UIViewController, UITextFieldDelegate, UIPickerVie
     /// Get list of hostels
     ///
     /// - Returns: list of hostels' name
-    func listOfHostel()->[String]{
-        return ["1", "2", "3"]
+    func listOfHostel()->[NhaTro]{
+        return ChuNha.getInstance().nhaTro!
     }
     
     /// Get list of rooms in hostel
     ///
     /// - Parameter hostel: Hostel id
     /// - Returns: list of rooms' name
-    func listOfRoomOf(_ hostel: String)->[String]{
-        return ["a", "b", "c"]
+    func listOfRoomOf()->[Phong]{
+        if hostelTextField.text != ""{
+            NhaTro.current?.getPhongTro()
+            return (NhaTro.current?.phongTro)!
+        }
+        return []
     }
     
     /// Get account of room
@@ -60,11 +64,13 @@ class RentRoomViewController: UIViewController, UITextFieldDelegate, UIPickerVie
     ///   - room: Room id
     ///   - hostel: hostel id
     /// - Returns: tuple of username and password of room
-    func getAccountOfRoom(_ room: String, of hostel: String ) -> (String, String) {
-        if room == "a" {
-            return ("","")
+    func getAccountOfRoom() -> (String, String) {
+        // Update username and password
+        if Phong.current?.thuePhong != nil{
+            print (Phong.current?.ten)
+            return ((Phong.current?.thuePhong?.taiKhoanPhong?.id)!, (Phong.current?.thuePhong?.taiKhoanPhong?.matoken)!)
         }
-        return ("abc", "123")
+        return ("","")
     }
     
     /// Update UI when choosen hostel and room
@@ -74,9 +80,14 @@ class RentRoomViewController: UIViewController, UITextFieldDelegate, UIPickerVie
     ///   - value: text to update
     func updateTextField(_ textField: UITextField, with value: String){
         textField.text = value
+        if textField == hostelTextField{
+            roomTextField.text = ""
+            usernameTextField.text = nonAccount
+            passwordTextField.text = nonAccount
+        }
         
         if !(hostelTextField.text?.isEmpty)! && !(roomTextField.text?.isEmpty)!{
-            let account = getAccountOfRoom(roomTextField.text!, of: hostelTextField.text!)
+            let account = getAccountOfRoom()
             if account != ("", ""){
                 copyInfoButton.isEnabled = true
                 usernameTextField.text = account.0
@@ -96,8 +107,14 @@ class RentRoomViewController: UIViewController, UITextFieldDelegate, UIPickerVie
     /// Generate account and save to database
     func generateAccount(){
         // TODO: - Generate account and save to database
-        usernameTextField.text = "bcd"
-        passwordTextField.text = "345"
+        usernameTextField.text = Phong.current?.maPhong.replacingOccurrences(of: "_", with: "-")
+        let temp: String = Phong.current?.maPhong.replacingOccurrences(of: "_", with: "") ?? ""
+        let temp1: String = String(temp.characters.reversed())
+        passwordTextField.text = temp1
+        NguoiThueTroDB.add(id: usernameTextField.text!, token: passwordTextField.text!)
+        Phong.current?.thuePhong = ThuePhong(id: usernameTextField.text!, token: passwordTextField.text!)
+        NhaTro.current?.updatePhongTro(old: Phong.current!, new: Phong.current!)
+        
     }
     
     /// Get string to copy to clipboard
@@ -137,28 +154,38 @@ class RentRoomViewController: UIViewController, UITextFieldDelegate, UIPickerVie
             return listOfHostel().count
         }
         if pickerView == roomChoosenPickerView {
-            return listOfRoomOf(hostelTextField.text!).count
+            return listOfRoomOf().count
         }
         return 0
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView == hostelChoosenPickerView{
-            return listOfHostel()[row]
+            return listOfHostel()[row].ten
         }
         if pickerView == roomChoosenPickerView {
-            return listOfRoomOf(hostelTextField.text!)[row]
+            return listOfRoomOf()[row].ten
         }
         return nil
 
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        print(row)
         if pickerView == hostelChoosenPickerView{
-            updateTextField(hostelTextField, with: listOfHostel()[row])
+            
+            updateCurrentNhaTro()
+            NhaTro.current = listOfHostel()[row]
+            roomChoosenPickerView.reloadAllComponents()
+            updateTextField(hostelTextField, with: listOfHostel()[row].ten!)
         }
         if pickerView == roomChoosenPickerView {
-            updateTextField (roomTextField, with: listOfRoomOf(hostelTextField.text!)[row])
+            if listOfRoomOf().count > 0{
+                updateCurrentPhongTro()
+                Phong.current = listOfRoomOf()[row]
+            }
+            updateTextField (roomTextField, with: listOfRoomOf()[row].ten)
+
         }
         pickerView.isHidden = true
     }
@@ -171,7 +198,7 @@ class RentRoomViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         copyInfoButton.isEnabled = true
         sender.isEnabled = false
         generateAccount()
-        
+
         showPopUpMessage(title: "Đã cho thuê phòng", message: getInfoToCopy(), view: self)
     }
     
