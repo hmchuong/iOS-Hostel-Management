@@ -106,6 +106,12 @@
                         "style": {
                           "size": "12"
                         }
+                      },{
+                        "type": "label",
+                        "text": "{{name}}",
+                        "style": {
+                          "size": "12"
+                        }
                       }]
                     }
                   }
