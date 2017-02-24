@@ -84,7 +84,7 @@
                     "{{#each items}}": {
                       "type": "vertical",
                       "style": {
-                        "background": "#fafafa",
+                        "background": "#ff0000",
                         "padding": "9",
                         "spacing": "13",
                         "width": "90",
@@ -96,9 +96,9 @@
                         "type": "image",
                         "url": "{{avatar}}",
                         "style": {
-                          "width": "76",
-                          "height": "76",
-                          "corner_radius": "38"
+                          "width": "38",
+                          "height": "38",
+                          "corner_radius": "19"
                         }
                       }, {
                         "type": "label",
